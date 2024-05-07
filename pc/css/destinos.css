@@ -1,0 +1,340 @@
+header {
+  height: 100vh;
+  background-color: #000;
+  background-image: url(../images/fondosNavbar/fondoDestinos.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.rows-destinos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-destinos {
+  position: relative;
+  width: 661px;
+  height: 580px;
+  margin: 35px 35px;
+}
+
+.fondoContornoJapon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.white-border {
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 28px;
+}
+
+.white-border h3 {
+  text-transform: uppercase;
+  font: var(--titulo);
+  width: 90%;
+  color: var(--colorPrimario);
+}
+
+.white-border h3::first-line {
+  color: var(--blancoPrincipal);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blancoPrincipal);
+  transition: all 0.3s ease;
+  font: var(--titulo);
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+}
+
+.navBar {
+  width: 100%;
+  height: fit-content; /* coge el contenido maximo y se adapta a el */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar .nav a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navBar .links {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.navBar .toggle-button {
+  color: var(--blancoPrincipal);
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action-button {
+  position: relative; /* Para posicionar el botón y el borde adicional */
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 10px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: var(--blancoPrincipal);
+  border-color: var(--blancoPrincipal);
+  color: var(--negroPrincipal);
+}
+
+/* Borde adicional */
+.action-button::before {
+  content: ""; /* Agregar contenido para poder aplicar estilos */
+  position: absolute;
+  top: 1px; /* Desplazamiento hacia abajo */
+  right: -6px; /* Desplazamiento hacia la derecha */
+  bottom: -6px; /* Desplazamiento hacia arriba */
+  left: 1px; /* Sin desplazamiento hacia la izquierda */
+  border-right: 2px solid white;
+  border-bottom: 2px solid white; /* Borde blanco de 1 píxel */
+  pointer-events: none; /* Evita que el borde adicional interfiera con los clics */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover::before {
+  color: var(--negroPrincipal); /* Cambio de color del texto */
+  border-width: 70%;
+  border-right: 2px solid var(--blancoPrincipal);
+  border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
+}
+
+.container {
+  margin: 30px 0;
+  background: linear-gradient(
+    to bottom,
+    var(--blancoPrincipal) 0%,
+    var(--degradado) 40%,
+    var(--degradado) 50%,
+    var(--degradado) 60%,
+    var(--blancoPrincipal) 100%
+  );
+}
+
+.column {
+  margin-bottom: 60px;
+}
+
+.card {
+  padding: 10px;
+  margin-right: 10px;
+  background-position: center center;
+  transition: all 0.3s ease;
+}
+
+.card:hover{
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Primera columna */
+.column1 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card-column1-izq {
+  width: 800px;
+  height: 580px;
+  background-image: url(../images/japon/contornoJapon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card-column1-izq-titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font: var(--titulo2);
+}
+.card-column1-izq-titulo:last-letter {
+  color: aqua;
+}
+
+.card-column1-izq-subtitulo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font: var(--titulo);
+}
+
+.card-column1-izq-cuerpoTexto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font: var(--cuerpoDeTexto);
+}
+
+.card-column1-der {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 661px;
+  height: 580px;
+  background-image: url(../images/japon/tokyo.jpg);
+  background-size: cover;
+}
+
+/* Segunda columna */
+.column2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card-column2-izq {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  height: 580px;
+  background-image: url(../images/eeuu/new\ york.jpg);
+  background-size: cover;
+}
+
+.card-column2-der {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 461px;
+  height: 580px;
+  background-image: url(../images/eeuu/washington.jpg);
+  background-size: cover;
+}
+
+/* Tercera columna */
+.column3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card-column3-izq {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 461px;
+  height: 580px;
+  background-image: url(../images/londres2.jpg);
+  background-size: cover;
+}
+
+.card-column3-der {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  height: 580px;
+  background-image: url(../images/japon/kyoto.jpg);
+  background-size: cover;
+}
+
+/* Cuarta columna */
+.column4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card-column4-izq {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  height: 580px;
+  background-image: url(../images/japon/osaka.jpg);
+  background-size: cover;
+}
+
+.card-column4-der {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 461px;
+  height: 580px;
+  background-image: url(../images/Roma.jpg);
+  background-size: cover;
+}
+
+.text-container {
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.text-container-background {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+   background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.125) 0%,
+    rgba(0, 0, 0, 0.500) 50%,
+    rgba(0, 0, 0, 0.626) 100%
+  );
+  color: var(--blancoPrincipal);
+}
+
+.text-container-titulo{
+  font: var(--titulo);
+  color: var(--blancoPrincipal);
+  text-shadow: 2px 2px 5px black;
+}
+
+.text-container-titulo-morado{
+  color: var(--colorPrimario);
+  font: var(--titulo);
+  margin-bottom: 10px;
+  margin-left: 30px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.text-container-subtitulo{
+  font: var(--cuerpoDeTexto);
+  color: var(--blancoPrincipal); 
+}

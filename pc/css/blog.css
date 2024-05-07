@@ -1,0 +1,103 @@
+header {
+  height: 100vh;
+  background-color: #000;
+  background-image: url(../images/fondosNavbar/fondoBlog.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blancoPrincipal);
+  transition: all 0.3s ease;
+  font: var(--titulo);
+}
+
+.logo {
+  width: 12rem;
+  height: 12rem;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--colorPrimario);
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navBar {
+  width: 100%;
+  height: fit-content; /* coge el contenido maximo y se adapta a el */
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar .nav a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navBar .links {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.navBar .toggle-button {
+  color: var(--blancoPrincipal);
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action-button {
+  position: relative; /* Para posicionar el botón y el borde adicional */
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+  margin-left: 1rem;
+  border: 0.2rem solid white;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: var(--blancoPrincipal);
+  border-color: var(--blancoPrincipal);
+  color: var(--negroPrincipal);
+}
+
+/* Borde adicional */
+.action-button::before {
+  content: ""; /* Agregar contenido para poder aplicar estilos */
+  position: absolute;
+  top: 0.1rem; /* Desplazamiento hacia abajo */
+  right: -0.6rem; /* Desplazamiento hacia la derecha */
+  bottom: -0.6rem; /* Desplazamiento hacia arriba */
+  left: 0.1rem; /* Sin desplazamiento hacia la izquierda */
+  border-right: 0.2rem solid white;
+  border-bottom: 0.2rem solid white; /* Borde blanco de 1 píxel */
+  pointer-events: none; /* Evita que el borde adicional interfiera con los clics */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover::before {
+  color: var(--negroPrincipal); /* Cambio de color del texto */
+  border-width: 70%;
+  border-right: 0.2rem solid var(--blancoPrincipal);
+  border-bottom: 0.2rem solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
+}
