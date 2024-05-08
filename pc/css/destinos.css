@@ -156,11 +156,6 @@ a {
   padding: 10px;
   margin-right: 10px;
   background-position: center center;
-  transition: all 0.3s ease;
-}
-
-.card:hover{
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Primera columna */
@@ -188,9 +183,6 @@ a {
   gap: 30px;
   font: var(--titulo2);
 }
-.card-column1-izq-titulo:last-letter {
-  color: aqua;
-}
 
 .card-column1-izq-subtitulo {
   display: flex;
@@ -214,6 +206,11 @@ a {
   height: 580px;
   background-image: url(../images/japon/tokyo.jpg);
   background-size: cover;
+  transition: all 0.5s ease;
+}
+
+.card-column1-der:hover{
+  box-shadow: 3px 3px 10px rgba(0, 59, 253, 0.5);
 }
 
 /* Segunda columna */
@@ -311,22 +308,22 @@ a {
   height: auto;
   margin-bottom: 20px;
   padding: 10px 20px;
-   background: linear-gradient(
+  background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.125) 0%,
-    rgba(0, 0, 0, 0.500) 50%,
+    rgba(0, 0, 0, 0.5) 50%,
     rgba(0, 0, 0, 0.626) 100%
   );
   color: var(--blancoPrincipal);
 }
 
-.text-container-titulo{
+.text-container-titulo {
   font: var(--titulo);
   color: var(--blancoPrincipal);
   text-shadow: 2px 2px 5px black;
 }
 
-.text-container-titulo-morado{
+.text-container-titulo-morado {
   color: var(--colorPrimario);
   font: var(--titulo);
   margin-bottom: 10px;
@@ -334,7 +331,55 @@ a {
   text-shadow: 2px 2px 5px black;
 }
 
-.text-container-subtitulo{
+.text-container-subtitulo {
   font: var(--cuerpoDeTexto);
-  color: var(--blancoPrincipal); 
+  color: var(--blancoPrincipal);
+}
+
+
+
+.title-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 300px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    black 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+
+.titulo {
+  font: var(--tituloLogin);
+  margin-bottom: 35px;
+}
+
+.titulo-register {
+  font: var(--tituloLogin);
+  color: var(--blancoPrincipal);
+  margin: 35px 0 0 20px;
+  text-shadow: 2px 2px 10px black;
+}
+
+.titulo-register-2 {
+  font: var(--tituloLogin);
+  color: var(--colorPrimario);
+  margin: 0 0 0 20px;
+  text-shadow: 2px 2px 10px black;
+}
+
+.cuerpoTexto-register {
+  font: var(--cuerpoDeTexto);
+  color: var(--blancoPrincipal);
+  font-size: 24px;
+  margin: 20px;
+  width: 700px;
+  text-shadow: 2px 2px 10px black;
 }
