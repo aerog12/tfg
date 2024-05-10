@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root {
   /*-------------COLORES-------------*/
@@ -11,6 +12,7 @@
 
   /*-------------FONTS-------------*/
   --fuenteTitulos: "Francois One", sans-serif;
+  --fuenteNav: "Bebas Neue", sans-serif;
   --fuenteCuerpoDeTexto: "Open Sans", sans-serif;
 
   /*-------------TEXTO-------------*/
@@ -33,4 +35,72 @@ html {
 
 body {
   background-color: var(--blancoPrincipal);
+}
+
+.title-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 300px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    black 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.titulo {
+  font: var(--tituloLogin);
+  margin-bottom: 35px;
+}
+
+.titulo-register {
+  font: var(--tituloLogin);
+  color: var(--blancoPrincipal);
+  margin: 35px 0 0 20px;
+  text-shadow: 2px 2px 10px black;
+}
+
+.titulo-register-2 {
+  font: var(--tituloLogin);
+  color: var(--colorPrimario);
+  margin: 0 0 0 60px;
+  text-shadow: 2px 2px 10px black;
+}
+
+.cuerpoTexto-register {
+  font: var(--cuerpoDeTexto);
+  color: var(--blancoPrincipal);
+  font-size: 24px;
+  margin: 20px;
+  width: 700px;
+  text-shadow: 2px 2px 10px black;
+}
+
+.principal-section {
+  background: linear-gradient(
+    to bottom,
+    var(--blancoPrincipal) 0%,
+    var(--degradado) 40%,
+    var(--degradado) 50%,
+    var(--degradado) 60%,
+    var(--blancoPrincipal) 100%
+  );
+}
+
+.line-gray {
+  border: 1px solid var(--grisPrincipal);
+  margin: 10px auto;
+  width: 500px;
+}
+
+.line-purple {
+  border: 3px solid var(--colorPrimario);
+  width: 50px;
+  margin: 20px auto;
 }

@@ -94,22 +94,6 @@ a {
   border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
 }
 
-.title-container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 300px;
-  width: 100%;
-  background: linear-gradient(
-    to right,
-    black 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
 .form-container {
   height: 590px;
   width: 660px;
@@ -203,7 +187,7 @@ input {
   color: var(--negroPrincipal);
   font: var(--cuerpoDeTexto);
 }
-
+/* CREAR CLASES PARA LOS BOTONES DE ABAJO DEL LOGIN PARA PODER DAR MARGENES */
 .btn-createAccount {
   color: var(--negroPrincipal);
   font: var(--cuerpoDeTexto);

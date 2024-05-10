@@ -4,6 +4,8 @@ header {
   background-image: url(../images/fondosNavbar/fondoBlog.jpg);
   background-size: cover;
   background-position: center;
+  position: relative;
+  padding: 0 2rem;
 }
 
 li {
@@ -17,19 +19,14 @@ a {
   font: var(--titulo);
 }
 
+.titulo-register-2 {
+  margin: 0 0 0 100px !important;
+}
+
+
 .logo {
   width: 12rem;
   height: 12rem;
-}
-
-a:hover {
-  text-decoration: none;
-  color: var(--colorPrimario);
-}
-
-header {
-  position: relative;
-  padding: 0 2rem;
 }
 
 .navBar {
