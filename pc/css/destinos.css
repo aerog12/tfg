@@ -209,7 +209,8 @@ a {
 }
 
 .card-column1-der:hover {
-  box-shadow: 3px 3px 10px rgba(0, 59, 253, 0.5);
+  box-shadow: 3px 3px 10px var(--colorPrimario);
+  transform: scale(1.01);
 }
 
 /* Segunda columna */

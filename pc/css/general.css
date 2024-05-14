@@ -12,12 +12,13 @@
 
   /*-------------FONTS-------------*/
   --fuenteTitulos: "Francois One", sans-serif;
-  --fuenteNav: "Bebas Neue", sans-serif;
+  --fuenteNav: "Bebas Neue", cursive;
   --fuenteCuerpoDeTexto: "Open Sans", sans-serif;
 
   /*-------------TEXTO-------------*/
   --titulo: 600 2.4rem var(--fuenteTitulos);
   --titulo2: 600 1.8rem var(--fuenteTitulos);
+  --tituloNav: 600 2.8rem var(--fuenteNav);
   --tituloLogin: 600 4.6rem var(--fuenteTitulos);
   --cuerpoDeTexto: 400 1.4rem var(--fuenteCuerpoDeTexto);
 }
