@@ -13,7 +13,6 @@ h1 {
   text-align: center;
 }
 
-
 li {
   list-style: none;
 }
@@ -104,11 +103,10 @@ a {
   border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
 }
 
-
 .btn-container {
   display: flex;
   justify-content: center;
-  margin: 100px 0 80px 0; 
+  margin: 100px 0 80px 0;
   gap: 200px;
 }
 
@@ -161,18 +159,18 @@ a {
   transform: scale(1.01);
 }
 
-.shop-links{
+.shop-links {
   font-size: 28px;
   color: var(--colorPrimario);
   padding: 0 20px;
 }
 
-.shop-title{
+.shop-title {
   font: var(--titulo);
   color: var(--negroPrincipal);
 }
 
-.shop-text{
+.shop-text {
   font: var(--cuerpoDeTexto);
   color: var(--negroPrincipal);
 }
@@ -212,24 +210,133 @@ a {
   background-size: cover;
 }
 
+.cards-categorias:hover {
+  transform: scale(1.01);
+}
+
 .text-container {
-  
+  padding: 10px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container-titulo {
+  font: var(--titulo);
+  font-size: 3.4rem;
+  color: var(--blancoPrincipal);
+  text-shadow: 2px 2px 5px black;
+}
+
+.text-container-titulo-morado {
+  font: var(--titulo);
+  font-size: 3.4rem;
+  color: var(--colorPrimario);
+  text-shadow: 2px 2px 5px black;
+}
+
+.guide-pages {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 20px 0;
+  gap: 10px;
+  font: var(--titulo);
+  color: var(--blancoPrincipal);
+  text-shadow: 2px 2px 5px black;
+}
+
+.guide-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 20px 0;
+  font: var(--titulo);
+  color: var(--blancoPrincipal);
+  text-shadow: 2px 2px 5px black;
+}
+
+.card-guide-icons {
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  padding-top: 9px;
+  background: rgba(66, 66, 66, 0.5);
+  color: var(--blancoPrincipal);
+  border: 2px dashed var(--blancoPrincipal);
+  font-size: 3.4rem;
+  border-radius: 50%;
+}
+
+.guide-information {
+  font: var(--cuerpoDeTexto);
+  color: var(--blancoPrincipal);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px black;
+}
+
+
+.text-container-categorias {
+  border: 1px solid white;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: end;
   padding-bottom: 28px;
-}
-
-.text-container h3 {
-  text-transform: uppercase;
   font: var(--titulo);
-  width: 90%;
-  color: var(--colorPrimario);
-}
-
-.text-container h3::first-line {
   color: var(--blancoPrincipal);
 }
 
+.text-container-background {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    text-align: center;
+}
+
+
+/* boton */
+
+.action-button-card {
+  width: 200px;
+  position: relative; /* Para posicionar el botón y el borde adicional */
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.3s ease;
+  font: var(--titulo);
+}
+
+.action-button-card:hover {
+  background-color: var(--blancoPrincipal);
+  border-color: var(--blancoPrincipal);
+  color: var(--negroPrincipal);
+}
+
+/* Borde adicional */
+.action-button-card::before {
+  content: ""; /* Agregar contenido para poder aplicar estilos */
+  position: absolute;
+  top: 1px; /* Desplazamiento hacia abajo */
+  right: -6px; /* Desplazamiento hacia la derecha */
+  bottom: -6px; /* Desplazamiento hacia arriba */
+  left: 1px; /* Sin desplazamiento hacia la izquierda */
+  border-right: 2px solid white;
+  border-bottom: 2px solid white; /* Borde blanco de 1 píxel */
+  pointer-events: none; /* Evita que el borde adicional interfiera con los clics */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.action-button-card:hover::before {
+  color: var(--negroPrincipal); /* Cambio de color del texto */
+  border-width: 70%;
+  border-right: 2px solid var(--blancoPrincipal);
+  border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
+}

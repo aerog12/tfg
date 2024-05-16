@@ -59,3 +59,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Array de rutas de imágenes
+  var bgImages = [
+    "images/comida.jpg",
+    "images/praga.jpg",
+    "images/santorini.jpg",
+    "images/explorar.jpg",
+  ];
+
+  // Seleccionar todas las tarjetas
+  var cards = document.querySelectorAll(".cards-blog");
+
+  // Iterar sobre las tarjetas y asignar una imagen de fondo a cada una
+  cards.forEach(function (card, index) {
+    card.style.backgroundImage = "url('" + bgImages[index] + "')";
+  });
+});
+
+
