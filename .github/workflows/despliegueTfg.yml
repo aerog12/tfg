@@ -1,0 +1,13 @@
+name: aerogTravel despliegue
+on:
+  push:
+    branches:
+      - main
+jobs:
+  despliegue:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: mover archivos
+        run: cp -r ./* /var/www/html/
