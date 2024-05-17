@@ -21,14 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
   // Array de rutas de imágenes
   var bgImages = [
     "images/japon/osaka.jpg",
     "images/eeuu/new york.jpg",
     "images/londres2.jpg",
-    "images/Roma.jpg"
+    "images/Roma.jpg",
   ];
 
   // Seleccionar todas las tarjetas
@@ -58,14 +57,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
   // Array de rutas de imágenes
   var bgImages = [
-    "images/comida.jpg",
+    "images/londres2.jpg",
+    "images/eeuu/new york.jpg",
     "images/praga.jpg",
-    "images/santorini.jpg",
-    "images/explorar.jpg",
+    "images/japon/arashiyama.jpg",
   ];
 
   // Seleccionar todas las tarjetas
@@ -77,4 +75,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Array de rutas de imágenes
+  var bgImages = [
+    "../images/eeuu/new york.jpg",
+    "../images/eeuu/new york.jpg",
+    "../images/eeuu/new york.jpg",
+    "../images/eeuu/new york.jpg",
+  ];
+
+  // Seleccionar todas las tarjetas
+  var cards = document.querySelectorAll(".information-cards");
+
+  // Iterar sobre las tarjetas y asignar una imagen de fondo a cada una
+  cards.forEach(function (card, index) {
+    card.style.backgroundImage = "url('" + bgImages[index] + "')";
+  });
+});
 
