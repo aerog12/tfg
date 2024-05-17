@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: mover archivos
-        run: cp -r ./* /var/www/html/
+        run: sudo cp -r ./* /var/www/html/
