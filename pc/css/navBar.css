@@ -48,13 +48,6 @@ a {
   width: fit-content;
 }
 
-.navBar .toggle-button {
-  color: var(--blancoPrincipal);
-  font-size: 3rem;
-  cursor: pointer;
-  display: none;
-}
-
 .action-button {
   position: relative; /* Para posicionar el botón y el borde adicional */
   padding: 10px 20px;

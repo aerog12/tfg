@@ -27,7 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px dashed #ff000000; */
+  /* border: 1px dashed #ff0000; */
 }
 
 html {
@@ -104,4 +104,99 @@ body {
   border: 3px solid var(--colorPrimario);
   width: 50px;
   margin: 20px auto;
+}
+
+/* Dropdown menu */
+
+.navBar .toggle-button {
+  color: var(--blancoPrincipal);
+  font-size: 3rem;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown-menu {
+  display: none;
+  margin: 40px 20px auto;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1.5s ease;
+  z-index: 1111;
+}
+
+.dropdown-menu.open {
+  height: auto;
+}
+
+.dropdown-menu li {
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu-button {
+  background-color: var(--colorPrimario);
+  padding: 5px 50px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dropdown-menu-button:hover {
+  box-shadow: 1px 1px 10px var(--negroPrincipal);
+}
+
+/* Responsive dropdown menu */
+
+@media (max-width: 1300px) {
+  .navBar {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 880px) {
+  .navBar .links,
+  .navBar .action-button,
+  .title-container {
+    display: none;
+  }
+
+  .navBar .toggle-button {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: block;
+    z-index: 1;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 1030px) {
+  .titulo-register {
+    font: var(--tituloLogin);
+    color: var(--blancoPrincipal);
+    margin: 35px 0 0 20px;
+    text-shadow: 2px 2px 10px black;
+    font-size: 4rem;
+  }
+
+  .titulo-register-2 {
+    font: var(--tituloLogin);
+    color: var(--colorPrimario);
+    margin: 0 0 0 60px;
+    text-shadow: 2px 2px 10px black;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 523px) {
+  .line-gray{
+    width: 250px;
+  }
 }

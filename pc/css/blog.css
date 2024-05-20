@@ -153,7 +153,7 @@ h2 {
   position: relative; /* Para posicionar el botón y el borde adicional */
   padding: 1.2rem 5rem;
   background-color: transparent;
-  color:black;
+  color: black;
   font-size: 1.6rem;
   text-decoration: none;
   border: 0.2rem solid black;
@@ -191,7 +191,7 @@ h2 {
   border-bottom: 0.2rem solid black; /* Borde blanco de 1 píxel */
 }
 
-.section-card{
+.section-card {
   display: flex;
   gap: 40px;
   margin-top: 60px;
@@ -199,13 +199,13 @@ h2 {
   flex-wrap: wrap;
 }
 
-.cards-blog-title{
+.cards-blog-title {
   text-align: center;
   margin-top: 40px;
   font: var(--titulo2);
 }
 
-.cards-blog{
+.cards-blog {
   width: 312px;
   height: 357px;
   background-color: white;
@@ -214,7 +214,7 @@ h2 {
   transition: all 0.5s ease;
 }
 
-.cards-blog:hover{
+.cards-blog:hover {
   transform: scale(1.02);
 }
 
@@ -229,5 +229,11 @@ h2 {
     font-size: 3rem;
     transform: none;
     text-align: right;
+  }
+}
+
+@media (max-width: 800px) {
+  .blog-image {
+    aspect-ratio: 16/9;
   }
 }

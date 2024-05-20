@@ -141,7 +141,7 @@ a {
   border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
 }
 
-.principal-section{
+.principal-section {
   margin-top: 50px;
 }
 
@@ -149,21 +149,17 @@ a {
   margin-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .card {
   padding: 10px;
-  margin-right: 10px;
-  background-position: center center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Primera columna */
-.column1 {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 .card-column1-izq {
   width: 800px;
@@ -171,9 +167,6 @@ a {
   background-image: url(../images/japon/contornoJapon.png);
   background-size: contain;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }
 
 .card-column1-izq-titulo {
@@ -214,11 +207,6 @@ a {
 }
 
 /* Segunda columna */
-.column2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 .card-column2-izq {
   background-color: #f0f0f0;
@@ -241,11 +229,6 @@ a {
 }
 
 /* Tercera columna */
-.column3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 .card-column3-izq {
   background-color: #f0f0f0;
@@ -268,11 +251,6 @@ a {
 }
 
 /* Cuarta columna */
-.column4 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 .card-column4-izq {
   background-color: #f0f0f0;
@@ -336,3 +314,11 @@ a {
   color: var(--blancoPrincipal);
 }
 
+/* RESPONSIVE */
+
+@media (max-width: 1499px) {
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
