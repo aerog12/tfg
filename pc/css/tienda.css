@@ -370,8 +370,4 @@ a {
   }
 }
 
-@media(max-width: 676px){
-  .cards-categorias{
-    margin-left: 50px;
-  }
-}
+
