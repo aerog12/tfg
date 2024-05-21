@@ -5,3 +5,6 @@
 # [figma](https://www.figma.com/design/FrdyTRV7A6neyin60VcfCA/AerogTravel?node-id=1669%3A162202&t=6qxkWYWz86wbY8E8-1)
 
 # [video youtube](https://youtu.be/XVbUrjSLl8o)
+
+# Os he dejado aquí el enlace a netlify donde podéis ir viendo todos los cambios que va teniendo la página
+# [enlace a netlify](https://aerogtravel-desktop.netlify.app/)
