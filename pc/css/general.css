@@ -128,7 +128,7 @@ body {
 }
 
 .dropdown-menu.open {
-  height: auto;
+  display: block;
 }
 
 .dropdown-menu li {
@@ -169,10 +169,6 @@ body {
     display: block;
   }
 
-  .dropdown-menu {
-    display: block;
-    z-index: 1;
-  }
 }
 
 /* Responsive */
