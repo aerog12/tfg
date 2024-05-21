@@ -62,7 +62,7 @@ body {
 .titulo-register {
   font: var(--tituloLogin);
   color: var(--blancoPrincipal);
-  
+
   text-shadow: 2px 2px 10px black;
 }
 
@@ -116,7 +116,7 @@ body {
   overflow: hidden;
   transition: all 1.5s ease;
   z-index: 1111;
-  position:fixed ;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-55%, -50%);
@@ -202,7 +202,6 @@ body {
     display: none;
   }
 
-  
   .navBar .toggle-button {
     display: block;
   }
@@ -211,10 +210,16 @@ body {
     display: block;
     z-index: 11111 !important;
   }
-  .title-container{
-    
-  }
 
+  @media (max-width: 500px) {
+    .titulo-register-2 {
+      margin: 0 0 0 100px !important;
+    }
+
+    .title-container {
+      margin-top: 100px;
+    }
+  }
 }
 /* Responsive */
 
