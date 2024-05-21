@@ -339,3 +339,39 @@ a {
   border-right: 2px solid var(--blancoPrincipal);
   border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 1352px) {
+  .btn-container {
+     margin: 100px 0 80px 0;
+     gap: 50px;
+  }
+}
+
+@media(max-width: 1476px){
+  .card-shop{
+    
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media(max-width: 664px){
+  .text-container-titulo{
+    font-size: 2.8rem;
+  }
+  .text-container-titulo-morado{
+    font-size: 2.8rem;
+  }
+
+  .guide-pages{
+    margin: 20px 0 20px 0;
+  }
+}
+
+@media(max-width: 676px){
+  .cards-categorias{
+    margin-left: 50px;
+  }
+}
