@@ -105,6 +105,7 @@ a {
 
 .btn-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 100px 0 80px 0;
   gap: 200px;
@@ -274,7 +275,6 @@ a {
   text-shadow: 2px 2px 5px black;
 }
 
-
 .text-container-categorias {
   border: 1px solid white;
   width: 100%;
@@ -288,14 +288,13 @@ a {
 }
 
 .text-container-background {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 20px 20px;
-    background: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  text-align: center;
 }
-
 
 /* boton */
 
