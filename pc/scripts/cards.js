@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   // Seleccionar todas las tarjetas
-  var cards = document.querySelectorAll(".cards-categorias");
+  var cards = document.querySelectorAll(".contenido-categorias");
 
   // Iterar sobre las tarjetas y asignar una imagen de fondo a cada una
   cards.forEach(function (card, index) {
