@@ -252,7 +252,7 @@ input {
   }
 
   header{
-    height: 170vh;
+    height: fit-content;
   }
 
 }
