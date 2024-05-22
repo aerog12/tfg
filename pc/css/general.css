@@ -42,7 +42,7 @@ body {
   display: flex;
   height: fit-content;
   flex-direction: column;
-  
+
   padding: 60px 30px 60px 30px;
   margin-top: 150px;
   width: 100%;
@@ -142,7 +142,6 @@ body {
 .dropdown-menu-button:hover {
   box-shadow: 1px 1px 10px var(--negroPrincipal);
 }
-
 
 .dropdown-menu {
   display: none;
