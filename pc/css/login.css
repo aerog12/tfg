@@ -94,9 +94,8 @@ a {
 }
 
 .title-container {
-  padding: 60px!important;
+  padding: 60px !important;
   margin-top: 80px !important;
-
 }
 
 .titulo-register-2 {
@@ -228,32 +227,26 @@ input {
   .titulo-form-container {
     display: flex;
     flex-direction: column;
+    
   }
 
   .title-container {
     text-align: center;
+    margin-top: 10px !important;
   }
 
-
-  .titulo-register-2{
-    margin: 0 auto  !important;
+  .titulo-register-2 {
+    margin: 0 auto !important;
   }
 
-  .form-container{
+  .form-container {
     display: flex;
     width: 90%;
     margin: 30px auto;
     margin-bottom: 30px;
   }
-
-  @media (max-width: 501px) {
-    .titulo-register-2{
-    margin: 0 auto  !important;
-  }
-  }
-
-  header{
+    header {
     height: fit-content;
   }
+  }
 
-}
