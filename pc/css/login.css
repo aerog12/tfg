@@ -110,7 +110,7 @@ a {
   flex-direction: column;
   margin-right: 100px;
   height: 590px;
-  width: 660px;
+  width: 80%;
   padding: 40px 20px;
   background-color: var(--blancoPrincipal);
   border-radius: 5px;
@@ -223,11 +223,10 @@ input {
 
 /* RESPONSIVE */
 
-@media (max-width: 840px) {
+@media (max-width: 1060px) {
   .titulo-form-container {
     display: flex;
     flex-direction: column;
-    
   }
 
   .title-container {
@@ -245,8 +244,7 @@ input {
     margin: 30px auto;
     margin-bottom: 30px;
   }
-    header {
+  header {
     height: fit-content;
   }
-  }
-
+}
