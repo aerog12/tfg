@@ -87,5 +87,17 @@ h1 {
   }
 }
 
+@media (max-width: 400px) {
+  .cards-container{
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .consejos-container{
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
 
 
