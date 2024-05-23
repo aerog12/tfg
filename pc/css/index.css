@@ -23,6 +23,11 @@ h1 {
   align-items: center;
 }
 
+.carrusel2-container {
+    margin-top: 0;
+}
+
+
 .card {
   width: 246px;
   height: 325px;

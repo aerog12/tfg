@@ -1,0 +1,75 @@
+.carousel-container {
+  width: 90%;
+  max-width: 1240px;
+  overflow: hidden;
+  position: relative;
+  margin: 60px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* Espacio entre las imágenes */
+  padding-bottom: 20px; /* Espacio inferior para la barra de desplazamiento */
+}
+
+.carousel-item {
+  position: relative;
+  margin: 20px; /* Ajustar el ancho para que se vea parte de la siguiente imagen */
+  scroll-snap-align: start;
+}
+
+.carousel-item img {
+  width: 600px;
+  height: 400px;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Estilo para la barra de desplazamiento */
+.carousel::-webkit-scrollbar {
+  height: 8px; /* Altura de la barra de desplazamiento */
+  margin-top: 10px; /* Espacio entre las imágenes y la barra */
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: purple; /* Color del pulgar (thumb) */
+  border-radius: 10px; /* Radio del borde para hacerlo redondeado */
+}
+
+.carousel::-webkit-scrollbar-track {
+  background-color: #ddd; /* Color de la pista (track) */
+  border-radius: 10px; /* Radio del borde para hacerlo redondeado */
+}
+
+/* Ocultar las flechas de desplazamiento */
+.carousel::-webkit-scrollbar-button {
+  display: none; /* Oculta las flechas de desplazamiento en WebKit */
+}
+
+@media (max-width: 600px) {
+  .carousel-container {
+    width: 90%;
+  }
+
+  .carousel-item img {
+    width: 450px;
+    height: 300px;
+    display: block;
+  }
+}

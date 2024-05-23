@@ -123,8 +123,9 @@ input:checked + label .description {
   background-image: url("../images/eeuu/new\ york.jpg");
 }
 
-@media(max-width: 600px) {
-  .container{
+@media(max-width: 1197px) {
+  .wrapper {
     display: none;
+    
   }
 }
