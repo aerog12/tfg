@@ -244,14 +244,23 @@ h2 {
   }
 }
 
-
-
-
-@media (max-width: 350px) {
+@media(max-width: 731px) {
   .blog-image {
-    
-    width: 90%;
-    height: 30rem;
+    width: 100%;
+  }
+}
+
+@media(max-width: 600px) {
+  .blog-image {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media(max-width: 450px) {
+  .blog-image {
+    width: 100%;
+    height: 350px;
   }
 
   .blog-container{
@@ -260,5 +269,12 @@ h2 {
 
   .vertical-title{
     font-size: 2.4rem;
+  }
+}
+
+@media(max-width: 330px) {
+  .cards-blog {
+    width: 250px;
+    height: 280px;
   }
 }
