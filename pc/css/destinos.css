@@ -5,6 +5,7 @@ header {
   background-size: cover;
   background-position: center;
   position: relative;
+   z-index: 2;
 }
 
 .titulo-register-2 {
@@ -178,7 +179,7 @@ a {
 .card-column1-izq-subtitulo {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  padding-top: 50px;
   font: var(--titulo);
 }
 

@@ -5,6 +5,7 @@ header {
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 2;
 }
 
 h1 {
@@ -192,21 +193,20 @@ a {
 }
 
 .cards-container {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin: 80px 30px;
 }
 
-.cards-container-categorias{
+.cards-container-categorias {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
 }
 
-.cards-categorias{
+.cards-categorias {
   margin: 60px auto;
-
 }
 
 .contenido-categorias {
@@ -357,7 +357,7 @@ a {
     gap: 50px;
   }
 
-  .cards-container-categorias{
+  .cards-container-categorias {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -388,13 +388,13 @@ a {
     margin: 20px 0 20px 0;
   }
 
-  .cards-categorias{
+  .cards-categorias {
     margin: 0 auto;
     margin-bottom: 40px;
   }
 
-  .cards-container-categorias{
+  .cards-container-categorias {
     grid-template-columns: repeat(1, 1fr);
-    margin: 80px 0 ;
+    margin: 80px 0;
   }
 }

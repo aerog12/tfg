@@ -38,6 +38,7 @@ body {
   background-color: var(--blancoPrincipal);
 }
 
+
 .title-container {
   display: flex;
   height: fit-content;
@@ -63,14 +64,14 @@ body {
   font: var(--tituloLogin);
   color: var(--blancoPrincipal);
 
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .titulo-register-2 {
   font: var(--tituloLogin);
   color: var(--colorPrimario);
   margin: 0 0 0 60px;
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cuerpoTexto-register {
@@ -194,6 +195,8 @@ body {
 }
 
 @media (max-width: 880px) {
+  
+
   .navBar .links,
   .navBar .action-button {
     display: none;
@@ -208,16 +211,36 @@ body {
     z-index: 11111 !important;
   }
 
-  @media (max-width: 500px) {
+  
+}
+
+@media (max-width: 500px) {
     .titulo-register-2 {
+      margin: 0 auto !important;
+    }
+
+    .titulo-register {
       margin: 0 auto !important;
     }
 
     .title-container {
       margin-top: 75px;
+      background: none;
+      text-align: center !important;
     }
+
+    header::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
   }
-}
+  }
 /* Responsive */
 
 @media (max-width: 1030px) {
@@ -242,4 +265,23 @@ body {
   .line-gray {
     width: 250px;
   }
+}
+
+@media (max-width: 393px) {
+  .title-container {
+    background: none;
+  }
+
+  .titulo-register-2 {
+    margin: 0;
+    font-size: 3.5rem !important;
+    text-align: center;
+  }
+
+  .titulo-register {
+    margin: 0;
+    font-size: 3.5rem !important;
+    text-align: center !important;
+  }
+
 }

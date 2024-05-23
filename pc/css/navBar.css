@@ -5,6 +5,7 @@ header {
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 2;
 }
 
 li {
@@ -32,6 +33,7 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+
 
 .navBar .nav a {
   font-size: 1.5rem;
@@ -89,5 +91,33 @@ a {
   border-right: 2px solid var(--blancoPrincipal);
   border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
 }
+
+@media (max-width: 500px) {
+    .titulo-register-2 {
+      margin: 0 auto !important;
+    }
+
+    .titulo-register {
+      margin: 0 auto !important;
+    }
+
+    .title-container {
+      margin-top: 75px;
+      background: none;
+      text-align: center !important;
+    }
+
+    header::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+  }
+  }
 
 
