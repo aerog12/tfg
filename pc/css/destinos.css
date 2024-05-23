@@ -5,7 +5,7 @@ header {
   background-size: cover;
   background-position: center;
   position: relative;
-   z-index: 2;
+  z-index: 2;
 }
 
 .titulo-register-2 {
@@ -318,7 +318,33 @@ a {
 
 @media (max-width: 1499px) {
   .card {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 661px;
   }
+}
+
+@media (max-width: 684px) {
+  .card {
+    width: 100%;
+  }
+
+  .column {
+    padding: 10px;
+  }
+}
+
+@media(max-width: 464px) {
+  .card {
+    height: 500px;
+  }
+}
+
+@media(max-width: 360px) {
+  .card {
+    height: 400px;
+  }
+
+  .card.card-column1-der {
+    margin-top: 200px;
+  }
+
 }
