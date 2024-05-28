@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// auth
+Route::prefix('auth')->group(function () {
+    Route::get('login', function(){
+        return "Hola login";
+    });
+
+    Route::get('register', [AuthController::class,'register']);
+   
+});
