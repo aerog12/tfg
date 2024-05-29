@@ -28,7 +28,7 @@ class AuthController extends Controller
         ]);
     }
 
-    public function login(Request $request)
+    public function login(AuthRequest $request)
     {
         $usuario = User::where('email', $request->email)->first();
 
