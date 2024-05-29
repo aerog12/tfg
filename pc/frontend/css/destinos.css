@@ -8,6 +8,10 @@ header {
   z-index: 2;
 }
 
+p{
+  font-size: 2rem !important;
+}
+
 .titulo-register-2 {
   margin: 0 0 0 100px !important;
 }
@@ -312,6 +316,7 @@ a {
 .text-container-subtitulo {
   font: var(--cuerpoDeTexto);
   color: var(--blancoPrincipal);
+  text-shadow: 2px 2px 5px black;
 }
 
 /* RESPONSIVE */

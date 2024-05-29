@@ -281,7 +281,7 @@ a {
   color: var(--blancoPrincipal);
   font-size: 2rem;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 5px black;
+  text-shadow: 3px 3px 5px black;
 }
 
 .text-container-categorias {

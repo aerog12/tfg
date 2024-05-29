@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/login', "login")->name('login');
+Route::view('/registro', "register")->name('registro');
+Route::view('/privada', "secret")->middleware('auth')->name('privada');
 
-// auth
-Route::prefix('auth')->group(function () {
-    Route::get('login', function(){
-        return "Hola login";
-    });
-
-    Route::get('register', [AuthController::class,'register']);
-   
-});
+Route::post('/validar-registro',[authController::class,'register'])->name('validar-registro');
+Route::post('/inicia-sesion',[authController::class,'login'])->name('inicia-sesion');
+Route::get('/logout',[authController::class,'logout'])->name('logout');
