@@ -1,0 +1,109 @@
+.ultimos-post-container {
+  margin: 30px auto;
+  text-align: center;
+}
+
+h1 {
+  font: var(--titulo);
+  text-align: center;
+}
+
+.titulo-register-2 {
+  margin: 0 0 0 200px;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 50px;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrusel2-container {
+    margin-top: 0;
+}
+
+
+.card {
+  width: 246px;
+  height: 325px;
+  background-color: #f0f0f0;
+  box-shadow: 4px 4px 10px black;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.text-container {
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 28px;
+}
+
+.text-container h3 {
+  text-transform: uppercase;
+  font: var(--titulo);
+  width: 90%;
+  color: var(--colorPrimario);
+  text-align: center;
+}
+
+.text-container h3::first-line {
+  color: var(--blancoPrincipal);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-wrapper.consejos-tres {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 670px) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-wrapper.consejos-tres {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .cards-container{
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .consejos-container{
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+
+
