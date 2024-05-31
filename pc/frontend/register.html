@@ -1,99 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="scripts/registro.js" defer></script>
-  <link rel="stylesheet" href="css/login.css" />
-  <link rel="stylesheet" href="css/general.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-  <link rel="icon" href="images/logos/logo pagina oscuro.png" />
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <div class="navBar">
-      <div>
-        <a href="index.html"
-          ><img src="images/logos/logo pagina oscuro.png" alt="" class="logo"
-        /></a>
-      </div>
-      <ul class="links">
-        <li><a href="destinos.html">Destinos</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-      </ul>
-      <a href="login.html" class="action-button">LOGIN</a>
-      <a href="#" class="action-button second">REGISTRATE</a>
-      <div class="toggle-button">
-        <i class="fa-solid fa-bars-staggered"></i>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts/registro.js" defer></script>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="images/logos/logo pagina oscuro.png" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="navBar">
+        <div>
+          <a href="index.html"
+            ><img src="images/logos/logo pagina oscuro.png" alt="" class="logo"
+          /></a>
+        </div>
+        <ul class="links">
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+        </ul>
+        <a href="login.html" class="action-button">LOGIN</a>
+        <a href="#" class="action-button second">REGISTRATE</a>
+        <div class="toggle-button">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </div>
 
-      <div class="dropdown-menu">
-        <li><a href="destinos.html">Destinos</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="login.html" class="dropdown-menu-button">Login</a></li>
-        <li>
-          <a href="register.html" class="dropdown-menu-button">Registrate</a>
-        </li>
+        <div class="dropdown-menu">
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="login.html" class="dropdown-menu-button">Login</a></li>
+          <li>
+            <a href="register.html" class="dropdown-menu-button">Registrate</a>
+          </li>
+        </div>
       </div>
-    </div>
-    <div class="titulo-form-container">
-      <div class="title-container">
-        <h2 class="titulo-register">CREAR NUEVA</h2>
-        <h2 class="titulo-register-2">CUENTA</h2>
-        <p class="cuerpoTexto-register">
-          Cree una nueva cuenta para tener acceso a todas las funcionalidades
-          de la página
-        </p>
-      </div>
-      <div class="form-container">
-        <form id="formularioRegistro">
-          <div class="mail">
-            <label class="mail-text" for="email">EMAIL</label>
-            <input
-              type="email"
-              id="email"
-              name="correo"
-              autofocus
-              placeholder="Introduce tu email"
-              required
-            />
-          </div>
-          <div class="name">
-            <label class="mail-text" for="name">NOMBRE COMPLETO</label>
-            <input
-              type="text"
-              id="name"
-              name="usuario"
-              placeholder="Introduce tu nombre"
-              required
-            />
-          </div>
-          <div class="passwd">
-            <label class="passwd-text" for="password">CONTRASEÑA</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="***********"
-              required
-            />
-          </div>
+      <div class="titulo-form-container">
+        <div class="title-container">
+          <h2 class="titulo-register">CREAR NUEVA</h2>
+          <h2 class="titulo-register-2">CUENTA</h2>
+          <p class="cuerpoTexto-register">
+            Cree una nueva cuenta para tener acceso a todas las funcionalidades
+            de la página
+          </p>
+        </div>
+        <div class="form-container">
+          <form id="formularioRegistro">
+            <div class="mail">
+              <label class="mail-text" for="email">EMAIL</label>
+              <input
+                type="email"
+                id="email"
+                name="correo"
+                autofocus
+                placeholder="Introduce tu email"
+                required
+              />
+            </div>
+            <div class="name">
+              <label class="mail-text" for="name">NOMBRE COMPLETO</label>
+              <input
+                type="text"
+                id="name"
+                name="usuario"
+                placeholder="Introduce tu nombre"
+                required
+              />
+            </div>
+            <div class="passwd">
+              <label class="passwd-text" for="password">CONTRASEÑA</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="***********"
+                required
+              />
+            </div>
 
-          <button type="submit" class="action-button-form">REGISTRATE</button>
-          <div class="line-gray"></div>
-          <div class="createAccount">
-            <p class="createAccount-text">¿No tienes cuenta?</p>
-            <a href="login.html" class="btn-createAccount">LOGIN</a>
-          </div>
-        </form>
+            <button type="submit" class="action-button-form">REGISTRATE</button>
+            <div class="line-gray"></div>
+            <div class="createAccount">
+              <p class="createAccount-text">¿No tienes cuenta?</p>
+              <a href="login.html" class="btn-createAccount">LOGIN</a>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-  </header>
-</body>
+    </header>
+  </body>
 </html>

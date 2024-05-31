@@ -1,13 +1,35 @@
-//es como el index html
-//f1+organize imports
-"use client"
+"use client";
+
+import { useEffect } from "react";
 import Header from "../../components/header";
+import Footer from "../../components/footer";
 import "/styles/seccion-principal-index.css";
 import "/styles/headerTextContainer.css";
+import "/styles/footer.css";
+
+const bgImages = [
+  "/images/ultimosPost/ultimopostcandem.jpg",
+  "/images/ultimosPost/ultimopostosaka.jpg",
+  "/images/ultimosPost/ultimopostroma.jpg",
+  "/images/ultimosPost/ultimoposteeuu.jpg",
+  "/images/ultimosPost/ultimopostkyoto.jpg",
+  "/images/ultimosPost/ultimopostakiba.jpg",
+  "/images/ultimosPost/consejosjapon.jpg",
+  "/images/ultimosPost/dondecomerlondres.jpg",
+  "/images/ultimosPost/tourporkyoto.jpg",
+];
 
 export default function Home() {
+  useEffect(() => {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card, index) => {
+      if (bgImages[index]) {
+        card.style.backgroundImage = `url(${bgImages[index]})`;
+      }
+    });
+  }, []);
+
   return (
-    //react fragments
     <>
       <Header
         imagenFondo="/images/fondosNavbar/fondoPrincipal2.jpg"
@@ -22,97 +44,53 @@ export default function Home() {
           <div className="line-purple"></div>
 
           <div className="cards-container">
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="text-container">
-                  <h3>la mejor comida en candem town</h3>
+            {[
+              "La mejor comida en candem town",
+              "Barrio retro osaka",
+              "Descubre el vaticano",
+              "Museo del aire y del espacio",
+              "Descubre el japón antiguo",
+              "Barrio electronico tokyo",
+            ].map((title, index) => (
+              <div className="card-wrapper" key={index}>
+                <div className="card">
+                  <div className="text-container">
+                    <h3>{title}</h3>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="text-container">
-                  <h3>barrio retro osaka</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="text-container">
-                  <h3>descubre el vaticano</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="text-container">
-                  <h3>museo del aire y del espacio</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="text-container">
-                  <h3>japón antiguo</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-wrapper">
-              <div className="card">
-                <div className="text-container">
-                  <h3>barrio electronico tokyo</h3>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
         <h1>NUESTRAS CIUDADES MÁS DESTACADAS</h1>
         <div className="line-gray"></div>
         <div className="line-purple"></div>
         <section className="consejos-container">
+          <h1>CONSEJOS</h1>
 
-        <h1>CONSEJOS</h1>
+          <div className="line-gray"></div>
+          <div className="line-purple"></div>
 
-        <div className="line-gray"></div>
-        <div className="line-purple"></div>
-
-        <div className="cards-container consejos">
-          <div className="card-wrapper">
-          <div className="card">
-            <div className="text-container">
-                <h3>Como viajar a japon 2024</h3>
+          <div className="cards-container consejos">
+            {[
+              "Como viajar a japon 2024",
+              "Donde comer londres",
+              "QUE VISITAR EN KYOTO",
+            ].map((title, index) => (
+              <div className="card-wrapper" key={index}>
+                <div className="card">
+                  <div className="text-container">
+                    <h3>{title}</h3>
+                  </div>
+                </div>
               </div>
-            </div>
-            </div>
+            ))}
+          </div>
 
-            <div className="card-wrapper">
-            <div className="card">
-              <div className="text-container">
-                <h3>Donde comer londres</h3>
-              </div>
-            </div>
-            </div>
-
-            <div className="card-wrapper consejos-tres">
-            <div className="card">
-              <div className="text-container">
-                <h3>QUE VISITAR EN KYOTO</h3>
-              </div>
-            </div>
-
-
-        </div>
-    </div>
-
-    <div id="informationSection-container">
-    </div>
-    </section>
+          <div id="informationSection-container"></div>
+        </section>
       </div>
+      <Footer /> 
     </>
   );
 }

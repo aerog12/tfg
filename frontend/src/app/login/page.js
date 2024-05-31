@@ -1,14 +1,16 @@
 import Header from "../../../components/header";
+import "/styles/form.css";
 
 export default function Login() {
   return (
     //react fragments
     <>
       <Header
-        imagenFondo="/images/fondosNavbar/fondoBlog.jpg"
-        texto1="BLOG DE"
-        texto2="AEROGTRAVEL"
-        texto3="CURIOSIDADES Y VIVENCIAS POR EL MUNDO"
+        imagenFondo="/images/fondosNavbar/fondoLogin.jpg"
+        texto1="BIENVENIDO DE"
+        texto2="NUEVO"
+        cuerpoTexto="Inicie sesión para tener acceso a todas las funcionalidades de la pagina"
+        estaEnLogin={true}
       />
     </>
   );

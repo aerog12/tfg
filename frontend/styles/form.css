@@ -1,0 +1,216 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blancoPrincipal);
+  transition: all 0.3s ease;
+  font: var(--titulo);
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+}
+
+.navBar {
+  width: 100%;
+  height: fit-content; /* coge el contenido maximo y se adapta a el */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar .nav a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navBar .links {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.navBar .toggle-button {
+  color: var(--blancoPrincipal);
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+}
+
+.title-container {
+  padding: 60px !important;
+  margin-top: 80px !important;
+}
+
+.titulo-register-2 {
+  font: var(--tituloLogin);
+  color: var(--colorPrimario);
+  margin: 0 0 0 260px !important;
+  text-shadow: 2px 2px 10px black;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+  height: 590px;
+  width: 80%;
+  padding: 30px 20px;
+  background-color: var(--blancoPrincipal);
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+.form-container-login {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+  height: 590px;
+  width: 80%;
+  padding: 80px 20px;
+  background-color: var(--blancoPrincipal);
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+
+
+.titulo-form-container {
+  display: flex;
+}
+
+.mail {
+  display: flex;
+  flex-direction: column;
+}
+
+.passwd {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+}
+
+.mail-text {
+  font: var(--titulo);
+}
+
+.passwd-text {
+  font: var(--titulo);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+input {
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--negroPrincipal);
+  font: var(--cuerpoDeTexto);
+}
+
+.line-gray {
+  border: 1px solid var(--negroPrincipal);
+  margin: 10px auto;
+  width: 99%;
+}
+
+.createAccount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createAccount-text {
+  color: var(--negroPrincipal);
+  font: var(--cuerpoDeTexto);
+}
+/* CREAR CLASES PARA LOS BOTONES DE ABAJO DEL LOGIN PARA PODER DAR MARGENES */
+.btn-createAccount {
+  color: var(--negroPrincipal);
+  font: var(--cuerpoDeTexto);
+  border-bottom: 1px solid var(--negroPrincipal);
+}
+
+.action-button-form {
+  position: relative; /* Para posicionar el botón y el borde adicional */
+  width: 123px;
+  height: 46px;
+  padding: 10px 20px;
+  color: var(--negroPrincipal);
+  font: var(--titulo);
+  font-size: 16px;
+  border: 2px solid var(--negroPrincipal);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-button-form:hover {
+  background-color: var(--negroPrincipal);
+  border-color: var(--negroPrincipal);
+  color: var(--blancoPrincipal);
+}
+
+/* Borde adicional */
+.action-button-form::before {
+  content: ""; /* Agregar contenido para poder aplicar estilos */
+  position: absolute;
+  top: 1px; /* Desplazamiento hacia abajo */
+  right: -6px; /* Desplazamiento hacia la derecha */
+  bottom: -6px; /* Desplazamiento hacia arriba */
+  left: 1px; /* Sin desplazamiento hacia la izquierda */
+  border-right: 2px solid var(--negroPrincipal);
+  border-bottom: 2px solid var(--negroPrincipal); /* Borde blanco de 1 píxel */
+  pointer-events: none; /* Evita que el borde adicional interfiera con los clics */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.action-button-form:hover::before {
+  color: var(--blancoPrincipal); /* Cambio de color del texto */
+  border-width: 70%;
+  border-right: 2px solid var(--negroPrincipal);
+  border-bottom: 2px solid var(--negroPrincipal); /* Borde blanco de 1 píxel */
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1060px) {
+  .titulo-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-container {
+    text-align: center;
+    margin-top: 10px !important;
+  }
+
+   .titulo-register {
+    margin: 0 auto !important;
+  }
+
+  .titulo-register-2 {
+    margin: 0 auto !important;
+  }
+
+  .form-container {
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+    margin-bottom: 30px;
+  }
+  header {
+    height: fit-content;
+  }
+}
