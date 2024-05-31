@@ -79,6 +79,15 @@ ul {
   transition: transform 0.5s;
 }
 
+.footer-col .social-links a svg path {
+  transition: 0.5s;
+}
+
+.footer-col .social-links a:hover svg path {
+  stroke: var(--colorPrimario);
+ 
+}
+
 .footer-col .social-links a:hover {
   background-color: var(--blancoPrincipal);
   color: var(--colorPrimario);

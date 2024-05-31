@@ -12,13 +12,6 @@ const bgImages = [
   "/images/Roma.jpg",
 ];
 
-// const bgImagesNueva = [
-//   "/images/japon/osaka.jpg",
-//   "/images/eeuu/losAngeles.jpg",
-//   "/images/londres3.jpg",
-//   "/images/roma2.jpg",
-// ];
-
 export default function Tienda() {
   useEffect(() => {
     const cards = document.querySelectorAll(".card-shop");
