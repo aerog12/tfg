@@ -51,6 +51,7 @@ jobs:
 
       - name: Arrancar aplicaciones con PM2
         run: |
+          cd ordenador
           pm2 start ecosystem.config.js --only nextjs-app
           pm2 start ecosystem.config.js --only laravel-app
           pm2 save --force
