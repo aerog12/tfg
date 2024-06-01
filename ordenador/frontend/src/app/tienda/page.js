@@ -85,7 +85,8 @@ export default function Tienda() {
                 <h3>PRECIO : 9.90 €</h3>
               </div>
               <p className="guide-information">
-                "CONOCIENDO UNA DE LAS CIUDADES MÁS POPULARES DE JAPÓN"
+                &quot;CONOCIENDO UNA DE LAS CIUDADES MÁS POPULARES DE
+                JAPÓN&quot;
               </p>
               <a href="/register">
                 <GeneralBoton textoBotonGeneral="COMPRAR" />
@@ -104,7 +105,9 @@ export default function Tienda() {
                 <i className="fa-solid fa-dollar-sign card-guide-icons"></i>
                 <h3>PRECIO : 7.80 €</h3>
               </div>
-              <p className="guide-information">"LA CIUDAD QUE NO DUERME"</p>
+              <p className="guide-information">
+                &quot;LA CIUDAD QUE NO DUERME&quot;
+              </p>
               <a href="/register">
                 <GeneralBoton textoBotonGeneral="COMPRAR" />
               </a>
@@ -123,7 +126,7 @@ export default function Tienda() {
                 <h3>PRECIO : 12.90 €</h3>
               </div>
               <p className="guide-information">
-                "VISITA LA CIUDAD MÁS COSMOPOLITA DE EUROPA"
+                &quot;VISITA LA CIUDAD MÁS COSMOPOLITA DE EUROPA&quot;
               </p>
               <a href="/register">
                 <GeneralBoton textoBotonGeneral="COMPRAR" />
@@ -143,7 +146,7 @@ export default function Tienda() {
                 <h3>PRECIO : 5.50 €</h3>
               </div>
               <p className="guide-information">
-                DESCUBRE LA MAGIA DE LA CIUDAD ETERNA
+                &quot;DESCUBRE LA MAGIA DE LA CIUDAD ETERNA&quot;
               </p>
               <a href="/register">
                 <GeneralBoton textoBotonGeneral="COMPRAR" />
