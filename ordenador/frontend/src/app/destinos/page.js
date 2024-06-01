@@ -3,7 +3,6 @@ import Header from "../../../components/header";
 import Footer from "../../../components/footer";
 import "/styles/destinos.css";
 
-
 export default function Destinos() {
   return (
     //react fragments
@@ -23,14 +22,14 @@ export default function Destinos() {
             </div>
             <div className="card-column1-izq-cuerpoTexto">
               <p>
-                ¡Bienvenidos a nuestra página de "Destinos", el portal perfecto
-                para explorar y descubrir los lugares más increíbles a los que
-                puedes viajar! Aquí te ofrecemos una selección cuidadosamente
-                curada de destinos que combinan cultura, historia, aventura y
-                relajación. Desde las vibrantes calles de Nueva York y el
-                encanto histórico de Roma, hasta la serenidad de Kioto y la
-                modernidad de Tokio, nuestra misión es inspirarte y ayudarte a
-                planificar tu próximo viaje de ensueño.
+                ¡Bienvenidos a nuestra página de &quot;Destinos&quot;, el portal
+                perfecto para explorar y descubrir los lugares más increíbles a
+                los que puedes viajar! Aquí te ofrecemos una selección
+                cuidadosamente curada de destinos que combinan cultura,
+                historia, aventura y relajación. Desde las vibrantes calles de
+                Nueva York y el encanto histórico de Roma, hasta la serenidad de
+                Kioto y la modernidad de Tokio, nuestra misión es inspirarte y
+                ayudarte a planificar tu próximo viaje de ensueño.
               </p>
               <p>
                 Cada destino que presentamos ha sido elegido por su singularidad
