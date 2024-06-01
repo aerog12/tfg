@@ -184,7 +184,7 @@ export default function Tienda() {
             <div className="contenido-categorias">
               <div className="text-container-categorias">
                 <div className="text-container-background">
-                  <h3>ESCAPADAS</h3>
+                  <h3>ESCAPADASsssss</h3>
                 </div>
               </div>
             </div>
