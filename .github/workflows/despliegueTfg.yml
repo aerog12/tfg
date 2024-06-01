@@ -24,7 +24,7 @@ jobs:
       - name: Configurar PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: "8.2"
 
       - name: Configurar y desplegar Laravel
         run: |
@@ -33,12 +33,12 @@ jobs:
           cp .env.example .env
           sed -i 's|APP_ENV=.*|APP_ENV=production|' .env
           sed -i 's|APP_DEBUG=.*|APP_DEBUG=false|' .env
-          sed -i 's|APP_URL=.*|APP_URL=${{ secrets.url_antonio }}|' .env
-          sed -i 's|DB_HOST=.*|DB_HOST=${{ secrets.host_antonio }}|' .env
-          sed -i 's|DB_PORT=.*|DB_PORT=${{ secrets.port_antonio }}|' .env
-          sed -i 's|DB_DATABASE=.*|DB_DATABASE=${{ secrets.basedatos_antonio }}|' .env
-          sed -i 's|DB_USERNAME=.*|DB_USERNAME=${{ secrets.usuario_antonio }}|' .env
-          sed -i 's|DB_PASSWORD=.*|DB_PASSWORD=${{ secrets.contrasena_antonio }}|' .env
+          sed -i 's|APP_URL=.*|APP_URL=${{ secrets.URL_ANTONIO }}|' .env
+          sed -i 's|DB_HOST=.*|DB_HOST=${{ secrets.HOST_ANTONIO }}|' .env
+          sed -i 's|DB_PORT=.*|DB_PORT=${{ secrets.PORT_ANTONIO }}|' .env
+          sed -i 's|DB_DATABASE=.*|DB_DATABASE=${{ secrets.BASEDATOS_ANTONIO }}|' .env
+          sed -i 's|DB_USERNAME=.*|DB_USERNAME=${{ secrets.USUARIO_ANTONIO }}|' .env
+          sed -i 's|DB_PASSWORD=.*|DB_PASSWORD=${{ secrets.CONTRASENA_ANTONIO }}|' .env
           APP_KEY=$(php artisan key:generate --show)
           sed -i "s|^APP_KEY=.*|APP_KEY=${APP_KEY}|" .env
           php artisan config:cache
