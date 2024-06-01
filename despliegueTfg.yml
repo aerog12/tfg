@@ -175,6 +175,15 @@ Resources:
           apt update -y
           apt upgrade -y
           apt install apache2 -y
+          systemctl start apache2
+          systemctl enable apache2
+          curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+          sudo apt install nodejs -y
+          npm install -g npm@latest
+          sudo npm i -g pm2
+          apt install mysql-server -y
+          sudo apt install php php-cli php-fpm php-mysql php-xml php-mbstring unzip -y
+          sudo apt install composer -y
           # Esta tiene que serla ultima instrucción
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource EC2Instance --region ${AWS::Region}
       Tags:
