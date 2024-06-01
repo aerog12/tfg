@@ -182,6 +182,7 @@ Resources:
           npm install -g npm@latest
           sudo npm i -g pm2
           apt install mysql-server -y
+          apt install mysql-client -y
           sudo apt install php php-cli php-fpm php-mysql php-xml php-mbstring unzip -y
           sudo apt install composer -y
           # Esta tiene que serla ultima instrucción
@@ -214,6 +215,16 @@ Resources:
         - IpProtocol: tcp
           FromPort: 443
           ToPort: 443
+          CidrIp:
+            Ref: SSHLocation
+        - IpProtocol: tcp
+          FromPort: 3000
+          ToPort: 3000
+          CidrIp:
+            Ref: SSHLocation
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
           CidrIp:
             Ref: SSHLocation
       Tags:

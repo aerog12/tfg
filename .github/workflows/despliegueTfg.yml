@@ -18,3 +18,36 @@ jobs:
           cd ..
           pm2 start ecosystem.config.js --only front-antonio
           pm2 save --force
+      - name: php
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+      - name: laravel
+        run: |
+          cd ordenador/backend
+          composer install --no-dev --optimize-autoloader
+          cp .env.example .env
+          sed -i 's|APP_ENV=.*|APP_ENV=production|' .env
+          sed -i 's|APP_DEBUG=.*|APP_DEBUG=false|' .env
+          sed -i 's|APP_URL=.*|APP_URL=${{ secrets.url_antonio}}|' .env
+          sed -i 's|DB_HOST=.*|DB_HOST=${{ secrets.host_antonio }}|' .env
+          sed -i 's|DB_PORT=.*|DB_PORT=${{ secrets.port_antonio }}|' .env
+          sed -i 's|DB_DATABASE=.*|DB_DATABASE=${{ secrets.basedatos_antonio }}|' .env
+          sed -i 's|DB_USERNAME=.*|DB_USERNAME=${{ secrets.usuario_antonio }}|' .env
+          sed -i 's|DB_PASSWORD=.*|DB_PASSWORD=${{ secrets.contrasena_antonio }}|' .env
+          APP_KEY=$(php artisan key:generate --show)
+          sed -i "s|^APP_KEY=.*|APP_KEY=${APP_KEY}|" .env
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+          php artisan migrate --force
+          cd :
+          pm2 start ecosystem.config.js --only back-antonio
+          pm2 save --force
+      - name: pm2
+        run: |
+          pm2 start ecosystem.config.js --only nextjs-app
+          pm2 start ecosystem.config.js --only laravel-app
+          pm2 save --force
+          
+          
