@@ -4,51 +4,48 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 class AuthController extends Controller
+
+
 {
-    public function registro(Request $request)
-    {
-        $usuario = User::create([
-            'name' => $request->input('name'),
-            'email'=> $request->input('email'),
-            'password'=> Hash::make($request->input('password')),
+    public  function user() {
+        return Auth::user();
+    }
+
+    public function registro(Request $request){
+        return User::create([
+            "name" => $request->input("name"),
+            "email"=> $request->input("email"),
+            "password"=> Hash::make($request->input("password")),
         ]);
         
-        $token = $usuario->createToken('auth_token')->plainTextToken;
-
-        return response()->json([
-            'user' => $usuario,
-            'token' => $token,
-            'token_type' => 'Bearer'
-        ]);
     }
 
-    public function login(Request $request)
-    {
-        $usuario = User::where('email', $request->email)->first();
-
-        if (!$usuario || !Hash::check($request->password, $usuario->password)) {
-            return response()->json([
-                'message' => 'credenciales incorrectas'
+    public function login(Request $request){
+        $credenciales= $request -> only(["email","password"]);
+        if (!Auth::attempt($credenciales)){
+            return response() -> json([
+                "mensaje" => "Credenciales incorrectas" 
             ], 401);
         }
-
-        $token = $usuario->createToken('auth_token')->plainTextToken;
-
-        return response()->json([
-            'message' => 'hola ' . $usuario->name,
-            'token' => $token,
-            'token_type' => 'Bearer'
-        ]);
+        $token = Auth::user() -> createToken('auth_token') -> plainTextToken;
+        $cookie = cookie('jwt', $token, 60 * 24);
+        return response([
+            'mensaje' => 'exito'
+        ], 200) -> withCookie($cookie);
     }
 
-    public function cerrarSesion()
-    {
-        auth()->user()->tokens()->delete();
-        return response()->json(['message' => 'sesion cerrada']);
+    public function cerrarSesion(Request $request){
+        $cookie= Cookie::forget('jwt');
+        return response([
+            'mensaje' => 'cerrado'
+        ], 200) -> withCookie($cookie);
     }
+
+
 }
