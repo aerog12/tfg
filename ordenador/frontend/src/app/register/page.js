@@ -11,11 +11,12 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-
+  const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
   const submit = async (e) => {
     e.preventDefault();
+    console.log("sitioLaravel:", sitioLaravel);
 
-    await fetch("http://localhost:8000/api/registro", {
+    await fetch(`${sitioLaravel}/registro`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +29,7 @@ export default function Register() {
       }),
     });
 
-    await fetch("http://localhost:8000/api/login", {
+    await fetch(`${sitioLaravel}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

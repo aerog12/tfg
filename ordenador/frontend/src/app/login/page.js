@@ -8,11 +8,11 @@ export default function Login() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
   const submit = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:8000/api/login", {
+    await fetch(`${sitioLaravel}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
