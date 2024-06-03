@@ -168,7 +168,7 @@ export default function Destinos() {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }

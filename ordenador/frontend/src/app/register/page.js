@@ -12,36 +12,56 @@ export default function Register() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const submit = async (e) => {
     e.preventDefault();
-    console.log("sitioLaravel:", sitioLaravel);
+    setIsSubmitting(true);
+    
+    try {
+      console.log("sitioLaravel:", sitioLaravel);
 
-    await fetch(`${sitioLaravel}/registro`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-      body: JSON.stringify({
-        email,
-        name,
-        password,
-      }),
-    });
+      const registerResponse = await fetch(`${sitioLaravel}/registro`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          email,
+          name,
+          password,
+        }),
+      });
 
-    await fetch(`${sitioLaravel}/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    });
+      if (registerResponse.ok) {
+        const loginResponse = await fetch(`${sitioLaravel}/login`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        });
 
-    router.push("/");
+        if (loginResponse.ok) {
+          router.push("/destinos");
+        } else {
+          // Handle login error
+          console.error("Login failed");
+        }
+      } else {
+        // Handle registration error
+        console.error("Registration failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -68,6 +88,7 @@ export default function Register() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              disabled={isSubmitting}
             />
           </div>
           <div className="name">
@@ -82,6 +103,7 @@ export default function Register() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
+              disabled={isSubmitting}
             />
           </div>
           <div className="passwd">
@@ -96,10 +118,11 @@ export default function Register() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              disabled={isSubmitting}
             />
           </div>
 
-          <button type="submit" className="action-button-form">
+          <button type="submit" className="action-button-form" disabled={isSubmitting}>
             REGISTRATE
           </button>
           <div className="line-gray"></div>

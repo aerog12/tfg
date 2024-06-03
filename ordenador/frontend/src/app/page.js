@@ -90,7 +90,8 @@ export default function Home() {
           <div id="informationSection-container"></div>
         </section>
       </div>
-      <Footer /> 
+     
+
     </>
   );
 }

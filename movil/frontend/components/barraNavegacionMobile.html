@@ -11,12 +11,13 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <link rel="stylesheet" href="../css/barraNavegacionMobile.css">
     <title>Document</title>
   </head>
   <body>
     <div class="navigation">
       <ul>
-        <li class="list">
+        <li class="list active">
           <a href="#">
             <span class="icon">
               <ion-icon name="home-outline"></ion-icon>
@@ -34,7 +35,9 @@
         </li>
         <li class="list">
           <a href="#">
-            <span class="icon"></span>
+            <span class="icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </span>
             <span class="text">Configuración</span>
           </a>
         </li>
@@ -54,7 +57,20 @@
             <span class="text">Mensaje </span>
           </a>
         </li>
+        <div class="indicator">
+
+        </div>
       </ul>
     </div>
+    <script>
+      const list = document.querySelectorAll(".list");
+      function activeLink(){
+        list.forEach((item) =>
+          item.classList.remove("active"));
+          this.classList.add("active");
+      }
+      list.forEach((item) => 
+      item.addEventListener("click",activeLink))
+    </script>
   </body>
 </html>

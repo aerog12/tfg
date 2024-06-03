@@ -25,9 +25,8 @@ h1 {
 }
 
 .carrusel2-container {
-    margin-top: 0;
+  margin-top: 0;
 }
-
 
 .card {
   width: 246px;
@@ -94,16 +93,13 @@ h1 {
 }
 
 @media (max-width: 400px) {
-  .cards-container{
-    align-items: center !important;
-    justify-content: center !important;
+  .cards-container {
+    align-items: center;
+    justify-content: center;
   }
 
-  .consejos-container{
-    align-items: center !important;
-    justify-content: center !important;
+  .consejos-container {
+    align-items: center;
+    justify-content: center;
   }
 }
-
-
-
