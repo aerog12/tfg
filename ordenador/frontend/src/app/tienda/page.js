@@ -163,7 +163,7 @@ export default function Tienda() {
           <a href="#" className="cards-categorias">
             <div className="contenido-categorias">
               <div className="text-container-categorias">
-                <div className="text-container-background">
+                <div className="text-container-background-tienda">
                   <h3>COMIDA</h3>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function Tienda() {
           <a href="#" className="cards-categorias">
             <div className="contenido-categorias">
               <div className="text-container-categorias">
-                <div className="text-container-background">
+                <div className="text-container-background-tienda">
                   <h3>LUGARES</h3>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function Tienda() {
           <a href="#" className="cards-categorias">
             <div className="contenido-categorias">
               <div className="text-container-categorias">
-                <div className="text-container-background">
+                <div className="text-container-background-tienda">
                   <h3>ESCAPADASsssss</h3>
                 </div>
               </div>
@@ -193,7 +193,7 @@ export default function Tienda() {
           <a href="#" className="cards-categorias">
             <div className="contenido-categorias">
               <div className="text-container-categorias">
-                <div className="text-container-background">
+                <div className="text-container-background-tienda">
                   <h3>EXPLORAR</h3>
                 </div>
               </div>

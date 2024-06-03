@@ -21,7 +21,7 @@ const bgImages = [
 
 export default function Home() {
   useEffect(() => {
-    const cards = document.querySelectorAll(".card");
+    const cards = document.querySelectorAll(".card-index");
     cards.forEach((card, index) => {
       if (bgImages[index]) {
         card.style.backgroundImage = `url(${bgImages[index]})`;
@@ -53,7 +53,7 @@ export default function Home() {
               "Barrio electronico tokyo",
             ].map((title, index) => (
               <div className="card-wrapper" key={index}>
-                <div className="card">
+                <div className="card-index">
                   <div className="text-container">
                     <h3>{title}</h3>
                   </div>
