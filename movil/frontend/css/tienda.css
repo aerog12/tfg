@@ -24,10 +24,6 @@ a {
   font: var(--titulo);
 }
 
-.titulo-register-2 {
-  margin: 0 0 0 120px !important;
-}
-
 .logo {
   width: 120px;
   height: 120px;
