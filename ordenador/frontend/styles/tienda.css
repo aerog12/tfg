@@ -172,7 +172,7 @@ a {
   transform: scale(1.01);
 }
 
-.text-container {
+.text-container-tienda {
   padding: 10px 20px 0 20px;
   display: flex;
   flex-direction: column;

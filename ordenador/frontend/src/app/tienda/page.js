@@ -134,7 +134,7 @@ export default function Tienda() {
             </div>
           </div>
           <div className="card-shop">
-            <div className="text-container">
+            <div className="text-container-tienda">
               <h3 className="text-container-titulo">ROMA :</h3>
               <h3 className="text-container-titulo-morado">GUÍA COMPLETA</h3>
               <div className="guide-pages">
