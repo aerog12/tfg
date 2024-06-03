@@ -143,34 +143,11 @@ body {
   box-shadow: 1px 1px 10px var(--negroPrincipal);
 }
 
-.navBar .toggle-button {
-  color: var(--blancoPrincipal);
-  font-size: 3rem;
-  cursor: pointer;
-  display: none;
-}
-
 /* Responsive */
 
 @media (max-width: 1300px) {
   .navBar {
     padding: 0 50px;
-  }
-}
-
-@media (max-width: 880px) {
-  .navBar .links,
-  .navBar .action-button {
-    display: none;
-  }
-
-  .navBar .toggle-button {
-    display: block;
-  }
-
-  .dropdown-menu {
-    display: block;
-    z-index: 11111 !important;
   }
 }
 

@@ -50,6 +50,29 @@ a {
 }
 
 
+.navBar .toggle-button {
+  color: var(--blancoPrincipal);
+  font-size: 3rem;
+  cursor: pointer;
+ 
+}
+
+
+@media (max-width: 880px) {
+  .navBar .links,
+  .navBar .action-button {
+    display: none;
+  }
+
+  .navBar .toggle-button {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: block;
+    z-index: 11111 !important;
+  }
+}
 
 @media (max-width: 500px) {
     .titulo-register-2 {

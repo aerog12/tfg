@@ -4,7 +4,6 @@ import { useState } from "react";
 import Header from "../../../components/header";
 import "/styles/headerTextContainer.css";
 import "/styles/form.css";
-import "/styles/navBar.css";
 
 export default function Register() {
   const router = useRouter();

@@ -1,6 +1,6 @@
 import "/styles/navBar.css";
 import a from "next/link";
-
+import {Menu} from "./icons.js";
 import HeaderTextContainer from "./header-text-container";
 import GeneralBoton from "./general-boton";
 
@@ -36,7 +36,7 @@ export default function Header(props) {
           <GeneralBoton textoBotonGeneral="REGISTRATE" />
         </a>
         <div className="toggle-button">
-          <i className="fa-solid fa-bars-staggered"></i>
+          <Menu />
         </div>
       </div>
 
@@ -48,7 +48,6 @@ export default function Header(props) {
           texto3={props.texto3}
           cuerpoTexto={props.cuerpoTexto}
         />
-       
       </div>
     </header>
   );

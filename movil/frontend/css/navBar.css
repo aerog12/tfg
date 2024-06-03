@@ -34,7 +34,6 @@ a {
   justify-content: space-between;
 }
 
-
 .navBar .nav a {
   font-size: 1.5rem;
   font-weight: bold;
@@ -93,21 +92,21 @@ a {
 }
 
 @media (max-width: 500px) {
-    .titulo-register-2 {
-      margin: 0 auto !important;
-    }
+  .titulo-register-2 {
+    margin: 0 auto !important;
+  }
 
-    .titulo-register {
-      margin: 0 auto !important;
-    }
+  .titulo-register {
+    margin: 0 auto !important;
+  }
 
-    .title-container {
-      margin-top: 75px;
-      background: none;
-      text-align: center !important;
-    }
+  .title-container {
+    margin-top: 75px;
+    background: none;
+    text-align: center !important;
+  }
 
-    header::after {
+  header::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -118,6 +117,4 @@ a {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
   }
-  }
-
-
+}
