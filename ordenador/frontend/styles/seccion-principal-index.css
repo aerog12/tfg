@@ -102,4 +102,15 @@ h1 {
     align-items: center;
     justify-content: center;
   }
+
+  .text-container{
+    padding-bottom: 28px;
+  }
+
+}
+
+@media(max-widht: 350px) {
+  .text-container{
+    padding-bottom: 28px;
+  }
 }

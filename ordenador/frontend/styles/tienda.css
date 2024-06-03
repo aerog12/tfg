@@ -140,7 +140,7 @@ a {
   transform: scale(1.01);
 }
 
-.cards-container {
+.cards-container-tienda {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
@@ -348,7 +348,7 @@ a {
 }
 
 @media (max-width: 395px) {
-  .text-container {
+  .text-container-tienda {
     padding: 0 10px;
   }
 }
