@@ -42,11 +42,6 @@ a {
   display: none;
 }
 
-.title-container {
-  padding: 60px !important;
-  margin-top: 80px !important;
-}
-
 .titulo-register-2 {
   font: var(--tituloLogin);
   color: var(--colorPrimario);

@@ -94,10 +94,6 @@ a {
   border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
 }
 
-.title-container {
-  padding: 60px !important;
-  margin-top: 80px !important;
-}
 
 .titulo-register-2 {
   font: var(--tituloLogin);
