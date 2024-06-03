@@ -120,12 +120,6 @@ input {
   font: var(--cuerpoDeTexto);
 }
 
-.line-gray {
-  border: 1px solid var(--negroPrincipal);
-  margin: 10px auto;
-  width: 99%;
-}
-
 .createAccount {
   display: flex;
   justify-content: space-between;
