@@ -78,7 +78,7 @@ export default function Home() {
               "QUE VISITAR EN KYOTO",
             ].map((title, index) => (
               <div className="card-wrapper" key={index}>
-                <div className="card">
+                <div className="card-index">
                   <div className="text-container">
                     <h3>{title}</h3>
                   </div>
