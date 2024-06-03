@@ -355,6 +355,10 @@ a {
     height: 300px;
   }
 
+  .guide-information{
+    font-size: 1.5rem;
+  }
+
   .contrarreembolso{
    width: 280px;
   }
