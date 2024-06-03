@@ -71,7 +71,7 @@ export default function Tienda() {
         <div className="line-gray"></div>
         <div className="line-purple"></div>
 
-        <div className="cards-container">
+        <div className="cards-container-tienda">
           <div className="card-shop">
             <div className="text-container-tienda">
               <h3 className="text-container-titulo">OSAKA :</h3>

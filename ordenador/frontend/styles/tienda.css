@@ -311,7 +311,7 @@ a {
 }
 
 @media (max-width: 1476px) {
-  .cards-container {
+  .cards-container-tienda {
     grid-template-columns: repeat(1, 1fr);
     display: flex;
     flex-wrap: wrap;
