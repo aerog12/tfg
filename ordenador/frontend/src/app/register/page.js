@@ -4,62 +4,42 @@ import { useState } from "react";
 import Header from "../../../components/header";
 import "/styles/headerTextContainer.css";
 import "/styles/form.css";
-export default function Register() {
+export default function Registro() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL
   const submit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      console.log("sitioLaravel:", sitioLaravel);
 
-      const registerResponse = await fetch(`${sitioLaravel}/registro`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({
-          email,
-          name,
-          password,
-        }),
-      });
+    await fetch(`${sitioLaravel}/registro`,{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify({
+        email,
+        name,
+        password,
+      }),
+    });
 
-      if (registerResponse.ok) {
-        const loginResponse = await fetch(`${sitioLaravel}/login`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-          body: JSON.stringify({
-            email,
-            password,
-          }),
-        });
+    await fetch(`${sitioLaravel}/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
 
-        if (loginResponse.ok) {
-          router.push("/destinos");
-        } else {
-          // Handle login error
-          console.error("Login failed");
-        }
-      } else {
-        // Handle registration error
-        console.error("test");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    router.push("/");
   };
 
   return (
