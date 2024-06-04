@@ -47,7 +47,7 @@ jobs:
           php artisan route:cache
           php artisan view:cache
           # php artisan migrate --force
-          php artisan migrate:refresh --seed
+          php artisan migrate:refresh --seed --force
           cd ..
           pm2 start ecosystem.config.js --only back-antonio
           pm2 save --force
