@@ -1,0 +1,18 @@
+name: despliegue apache movil
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: [self-hosted , aerogTravelMovil]
+    steps:
+      - uses: actions/checkout@v4
+      - name: mover archivos
+        run: |
+          cd ~/actions-runner/_work/tfg/tfg/movil/frontend
+          sudo cp -r * /var/www/html
+      - name: despliegue apache
+        run: |
+          sudo service apache2 restart
