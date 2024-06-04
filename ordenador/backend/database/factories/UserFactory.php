@@ -17,10 +17,6 @@ class UserFactory extends Factory
             'name'=> 'nombre'. random_int(0,1000),
             'email' => 'email'. random_int(0,1000),
             'password'=> Hash::make('password'),
-
-            // "name"=> $this->faker->name,
-            // "email"=> $this->faker->safeEmail,
-            // "password"=> Hash::make($this->faker->password),
         ];
    }
 }
