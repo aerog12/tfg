@@ -53,7 +53,7 @@ export default function Register() {
         }
       } else {
         // Handle registration error
-        console.error("Registration failed");
+        console.error("test");
       }
     } catch (error) {
       console.error("Error:", error);
