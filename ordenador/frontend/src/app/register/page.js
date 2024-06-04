@@ -66,7 +66,7 @@ export default function Register() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              disabled={isSubmitting}
+              
             />
           </div>
           <div className="name">
@@ -81,7 +81,7 @@ export default function Register() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              disabled={isSubmitting}
+          
             />
           </div>
           <div className="passwd">
@@ -96,11 +96,11 @@ export default function Register() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              disabled={isSubmitting}
+             
             />
           </div>
 
-          <button type="submit" className="action-button-form" disabled={isSubmitting}>
+          <button type="submit" className="action-button-form" >
             REGISTRATE
           </button>
           <div className="line-gray"></div>
