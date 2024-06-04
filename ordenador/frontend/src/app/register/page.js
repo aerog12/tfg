@@ -4,7 +4,7 @@ import { useState } from "react";
 import Header from "../../../components/header";
 import "/styles/headerTextContainer.css";
 import "/styles/form.css";
-export default function Registro() {
+export default function Register() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
