@@ -3,10 +3,6 @@
   text-align: center;
 }
 
-h1 {
-  font: var(--titulo);
-}
-
 .titulo-register-2 {
   margin: 0 0 0 200px !important;
 }
@@ -15,6 +11,10 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   padding: 50px;
+}
+
+.consejos-container{
+  margin-bottom: 100px;
 }
 
 .card-wrapper {

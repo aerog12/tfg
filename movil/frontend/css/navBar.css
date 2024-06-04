@@ -1,94 +1,27 @@
-header {
-  height: 100vh;
-  background-color: #000;
-  background-image: url(../images/fondosNavbar/fondoPrincipal.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 2;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--blancoPrincipal);
-  transition: all 0.3s ease;
-  font: var(--titulo);
-}
 
 .logo {
   width: 120px;
   height: 120px;
 }
 
+.principal-section{
+  margin-top: 80px !important;
+}
+
 .navBar {
   width: 100%;
   height: fit-content; /* coge el contenido maximo y se adapta a el */
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.navBar .nav a {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navBar .links {
-  display: flex;
-  align-items: center;
-  gap: 6rem;
-}
-
-.button-container {
-  width: fit-content;
-}
-
-.action-button {
-  position: relative; /* Para posicionar el botón y el borde adicional */
-  padding: 10px 20px;
-  background-color: transparent;
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  margin-left: 10px;
-  border: 2px solid white;
-  box-sizing: border-box;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.action-button:hover {
   background-color: var(--blancoPrincipal);
-  border-color: var(--blancoPrincipal);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.title{
   color: var(--negroPrincipal);
-}
-
-/* Borde adicional */
-.action-button::before {
-  content: ""; /* Agregar contenido para poder aplicar estilos */
-  position: absolute;
-  top: 1px; /* Desplazamiento hacia abajo */
-  right: -6px; /* Desplazamiento hacia la derecha */
-  bottom: -6px; /* Desplazamiento hacia arriba */
-  left: 1px; /* Sin desplazamiento hacia la izquierda */
-  border-right: 2px solid white;
-  border-bottom: 2px solid white; /* Borde blanco de 1 píxel */
-  pointer-events: none; /* Evita que el borde adicional interfiera con los clics */
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.action-button:hover::before {
-  color: var(--negroPrincipal); /* Cambio de color del texto */
-  border-width: 70%;
-  border-right: 2px solid var(--blancoPrincipal);
-  border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
+  font-style: italic;
 }
 
 @media (max-width: 500px) {

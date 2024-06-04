@@ -1,0 +1,51 @@
+.content {
+  padding: 20px;
+  padding-bottom: 60px; /* Espacio para la barra de navegación */
+}
+
+.navbar-mobile {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--blancoPrincipal);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  padding: 20px 0 15px 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-mobile a {
+  color: var(--negroPrincipal);
+  font: var(--cuerpoDeTexto);
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar-mobile a:hover {
+  color: var(--colorPrimario);
+}
+.navbar-mobile a span {
+  display: block;
+  font-size: 12px;
+
+}
+
+.navbar-mobile a i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 440px) {
+  
+  .navbar-mobile a span{
+    font-size: 10px;
+  }
+  
+  .navbar-mobile a i{
+    font-size: 15px;
+  }
+}

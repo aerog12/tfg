@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/tienda.css" />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/navBar.css" />
 
     <script src="scripts/cards.js"></script>
     <link
@@ -15,42 +16,21 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
+      <!--NAVBAR-->    
       <div class="navBar">
         <div>
           <a href="index.html"
-            ><img src="images/logos/logo pagina oscuro.png" alt="" class="logo"
+            ><img src="images/logos/logoPaginaMobile.png" alt="" class="logo"
           /></a>
         </div>
-        <ul class="links">
-          <li><a href="destinos.html">Destinos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="tienda.html">Tienda</a></li>
-        </ul>
-        <a href="login.html" class="action-button">LOGIN</a>
-        <a href="register.html" class="action-button second">REGISTRATE</a>
-        <div class="toggle-button">
-          <i class="fa-solid fa-bars-staggered"></i>
-        </div>
-      </div>
-      <div class="dropdown-menu">
-        <li><a href="destinos.html">Destinos</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="login.html" class="dropdown-menu-button">Login</a></li>
-        <li>
-          <a href="register.html" class="dropdown-menu-button">Registrate</a>
-        </li>
-      </div>
-      <div class="title-container">
-        <h2 class="titulo-register">NUESTRA</h2>
-        <h2 class="titulo-register-2">TIENDA</h2>
-        <h2 class="titulo-register">
-          TODO LO QUE NECESITAS PARA UN VIAJE DE ENSUEÑO
-        </h2>
-      </div>
-    </header>
+      <h1 class="title">AerogTravel</h1>
+      </div>  
+
+      
     <div class="principal-section">
+      <h1>TIENDA</h1>
+      <div class="line-gray"></div>
+      <div class="line-purple"></div>
       <div class="btn-container">
         <a href="#"
           ><div class="contrarreembolso">
@@ -111,7 +91,7 @@
             <p class="guide-information">
               "CONOCIENDO UNA DE LAS CIUDADES MÁS POPULARES DE JAPON"
             </p>
-            <button class="action-button-card">COMPRAR</button>
+            <button class="action-button">COMPRAR</button>
           </div>
         </div>
         <div class="card-shop">
@@ -127,8 +107,9 @@
               <h3>PRECIO : 7.80 €</h3>
             </div>
             <p class="guide-information">"LA CIUDAD QUE NO DUERME"</p>
-            <button class="action-button-card">COMPRAR</button>
+           
           </div>
+           <button class="action-button">COMPRAR</button>
         </div>
 
         <div class="card-shop">
@@ -146,7 +127,7 @@
             <p class="guide-information">
               "VISITA LA CIUDAD MAS COSMOPOLITA DE EUROPA"
             </p>
-            <button class="action-button-card">COMPRAR</button>
+            <button class="action-button">COMPRAR</button>
           </div>
         </div>
         <div class="card-shop">
@@ -164,7 +145,7 @@
             <p class="guide-information">
               DESCUBRE LA MAGIA DE LA CIUDAD ETERNA
             </p>
-            <button class="action-button-card">COMPRAR</button>
+            <button class="action-button">COMPRAR</button>
           </div>
         </div>
       </div>
@@ -217,10 +198,15 @@
           </div></a
         >
       </div>
-      <!--FOOTER-->
-      <div id="footer-container">
-        <script src="scripts/footer.js"></script>
+
+      <!-- BARRA DE NAVEGACION MOBILE -->
+      <div id="barraNavegacion-container">
+        <script src="scripts/barraNavegacion.js"></script>
       </div>
+      <!--FOOTER-->
+      <!-- <div id="footer-container">
+        <script src="scripts/footer.js"></script>
+      </div> -->
     </div>
   </body>
 </html>

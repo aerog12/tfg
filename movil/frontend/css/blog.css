@@ -27,6 +27,7 @@ h1 {
 h2 {
   font: var(--titulo);
   font-size: 3rem;
+  text-align: center;
 }
 
 .titulo-register-2 {
@@ -194,7 +195,7 @@ h2 {
 .section-card {
   display: flex;
   gap: 40px;
-  margin-top: 60px;
+  margin: 60px 0 130px 0;
   justify-content: center;
   flex-wrap: wrap;
 }

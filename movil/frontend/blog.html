@@ -7,6 +7,7 @@
     <script src="scripts/cards.js" defer></script>
     <link rel="stylesheet" href="css/blog.css" />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/navBar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -15,43 +16,20 @@
     <title>Aerogtravel</title>
   </head>
   <body>
-    <!--HEADER-->
-    <header>
-      <div class="navBar">
-        <div>
-          <a href="index.html"
-            ><img src="images/logos/logo pagina oscuro.png" alt="" class="logo"
-          /></a>
-        </div>
-        <ul class="links">
-          <li><a href="destinos.html">Destinos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="tienda.html">Tienda</a></li>
-        </ul>
-        <a href="login.html" class="action-button">LOGIN</a>
-        <a href="#" class="action-button second">REGISTRATE</a>
-        <div class="toggle-button">
-          <i class="fa-solid fa-bars-staggered"></i>
-        </div>
+    <!--NAVBAR-->
+    <div class="navBar">
+      <div>
+        <a href="index.html"
+          ><img src="images/logos/logoPaginaMobile.png" alt="" class="logo"
+        /></a>
       </div>
-
-      <div class="dropdown-menu">
-        <li><a href="destinos.html">Destinos</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="login.html" class="dropdown-menu-button">Login</a></li>
-        <li>
-          <a href="register.html" class="dropdown-menu-button">Registrate</a>
-        </li>
-      </div>
-      <div class="title-container">
-        <h2 class="titulo-register">BLOG DE</h2>
-        <h2 class="titulo-register-2">AEROGTRAVEL</h2>
-        <h2 class="titulo-register">CURIOSIDADES Y VIVENCIAS POR EL MUNDO</h2>
-      </div>
-    </header>
+      <h1 class="title">AerogTravel</h1>
+    </div>
 
     <div class="principal-section">
+        <h2>BLOG</h2>
+        <div class="line-gray"></div>
+        <div class="line-purple"></div>
       <div class="blog-container">
         <div class="section">
           <div class="vertical-title">EL PAÍS DEL SOL NACIENTE</div>
@@ -148,9 +126,13 @@
       </div>
     </div>
 
-    <!--FOOTER-->
-    <div id="footer-container">
-      <script src="scripts/footer.js"></script>
+    <!-- BARRA DE NAVEGACION MOBILE -->
+    <div id="barraNavegacion-container">
+      <script src="scripts/barraNavegacion.js"></script>
     </div>
+    <!--FOOTER-->
+    <!-- <div id="footer-container">
+      <script src="scripts/footer.js"></script>
+    </div> -->
   </body>
 </html>

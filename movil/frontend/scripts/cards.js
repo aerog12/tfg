@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   // Seleccionar todas las tarjetas
-  var cards = document.querySelectorAll(".card");
+  var cards = document.querySelectorAll(".card-index ");
 
   // Iterar sobre las tarjetas y asignar una imagen de fondo a cada una
   cards.forEach(function (card, index) {
