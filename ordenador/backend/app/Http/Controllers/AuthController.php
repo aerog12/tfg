@@ -14,7 +14,7 @@ class AuthController extends Controller
 
 {
     public  function user() {
-        return Auth::user();
+        return response()->json(Auth::user());
     }
 
     public function registro(Request $request){
@@ -26,19 +26,23 @@ class AuthController extends Controller
         
     }
 
-    public function login(Request $request){
-        $credenciales= $request -> only(["email","password"]);
-        if (!Auth::attempt($credenciales)){
-            return response() -> json([
-                "mensaje" => "Credenciales incorrectas" 
-            ], 401);
-        }
-        $token = Auth::user() -> createToken('auth_token') -> plainTextToken;
-        $cookie = cookie('jwt', $token, 60 * 24);
-        return response([
-            'mensaje' => 'exito'
-        ], 200) -> withCookie($cookie);
+   public function login(Request $request)
+{
+    $credenciales = $request->only(['email', 'password']);
+    if (!Auth::attempt($credenciales)) {
+        return response()->json([
+            'mensaje' => 'Credenciales incorrectas'
+        ], 401);
     }
+    $user = Auth::user();
+    $token = $user->createToken('auth_token')->plainTextToken;
+    $cookie = cookie('jwt', $token, 60 * 24);
+    return response([
+        'mensaje' => 'exito',
+        'token' => $token
+    ], 200)->withCookie($cookie);
+}
+
 
     public function cerrarSesion(Request $request){
         $cookie= Cookie::forget('jwt');

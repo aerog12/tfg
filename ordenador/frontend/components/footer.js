@@ -4,7 +4,6 @@ import "/styles/footer.css";
 
 export default function Footer() {
   return (
-    <body>
       <footer className="footer">
         <div className="footer-container">
           <div className="row-footer">
@@ -83,6 +82,5 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-    </body>
   );
 }

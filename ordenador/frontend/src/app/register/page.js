@@ -12,8 +12,8 @@ export default function Register() {
   const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
   const submit = async (e) => {
     e.preventDefault();
-    
-     await fetch(`${sitioLaravel}/registro`, {
+
+    await fetch(`${sitioLaravel}/registro`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,8 +38,14 @@ export default function Register() {
       }),
     });
 
+    let paginaRedirigida;
+    if (email === "admin@admin" && password === "adminadmin") {
+      paginaRedirigida = "/admin";
+    } else {
+      paginaRedirigida = "/usuario";
+    }
 
-    router.push("/");
+    router.push(paginaRedirigida);
   };
 
   return (
@@ -66,7 +72,6 @@ export default function Register() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              
             />
           </div>
           <div className="name">
@@ -81,7 +86,6 @@ export default function Register() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-          
             />
           </div>
           <div className="passwd">
@@ -96,11 +100,10 @@ export default function Register() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-             
             />
           </div>
 
-          <button type="submit" className="action-button-form" >
+          <button type="submit" className="action-button-form">
             REGISTRATE
           </button>
           <div className="line-gray"></div>

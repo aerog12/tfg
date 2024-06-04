@@ -24,7 +24,17 @@ export default function Login() {
       }),
     });
 
-    router.push("/");
+    
+    let paginaRedirigida;
+    if (email === "admin@admin" && password === "adminadmin") {
+      paginaRedirigida = "/admin";
+    } else {
+      paginaRedirigida = "/usuario";
+    }
+
+    router.push(paginaRedirigida);
+
+    // router.push("/");
   };
 
   return (
