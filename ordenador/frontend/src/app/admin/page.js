@@ -1,4 +1,5 @@
 "use client";
+import Header from "../../../components/header";
 import { useEffect, useState } from "react";
 
 export default function Admin() {
@@ -72,6 +73,7 @@ export default function Admin() {
 
   return (
     <>
+      <Header />
       <h1>Hola {informacionAdmin?.email}</h1>
       <h2>Lista de Usuarios:</h2>
       <ul>
