@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
 
             <div className="footer-col">
-              <h4>COMIDAa</h4>
+              <h4>COMIDA</h4>
               <ul>
                 <li>
                   <a href="#">Donde comer</a>

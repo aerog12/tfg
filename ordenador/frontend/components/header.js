@@ -1,6 +1,6 @@
 import "/styles/navBar.css";
 import a from "next/link";
-import {Menu} from "./icons.js";
+import { Menu } from "./icons.js";
 import HeaderTextContainer from "./header-text-container";
 import GeneralBoton from "./general-boton";
 
@@ -28,13 +28,25 @@ export default function Header(props) {
             <a href="/tienda">Tienda</a>
           </li>
         </ul>
-        <a href="/login">
-          <GeneralBoton textoBotonGeneral="LOGIN" />
-        </a>
-
-        <a href="/register">
-          <GeneralBoton textoBotonGeneral="REGISTRATE" />
-        </a>
+        {props.isAuthenticated ? (
+          <>
+            <a href="/login">
+              <GeneralBoton textoBotonGeneral="Cerrar Sesión" />
+            </a>
+            <a href="/usuario">
+              <GeneralBoton textoBotonGeneral="Mi Perfil" />
+            </a>
+          </>
+        ) : (
+          <>
+            <a href="/login">
+              <GeneralBoton textoBotonGeneral="Iniciar Sesión" />
+            </a>
+            <a href="/register">
+              <GeneralBoton textoBotonGeneral="Regístrate" />
+            </a>
+          </>
+        )}
         <div className="toggle-button">
           <Menu />
         </div>

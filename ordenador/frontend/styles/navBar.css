@@ -54,8 +54,24 @@ a {
   color: var(--blancoPrincipal);
   font-size: 3rem;
   cursor: pointer;
+  display: none;
  
 }
+
+.texto-con-letter-spacing{
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.texto-con-letter-spacing2{
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.texto-con-letter-spacing2 span{
+  color: var(--blancoPrincipal);
+}
+
 
 
 @media (max-width: 880px) {

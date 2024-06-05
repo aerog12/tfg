@@ -50,6 +50,4 @@ class AuthController extends Controller
             'mensaje' => 'cerrado'
         ], 200) -> withCookie($cookie);
     }
-
-
 }

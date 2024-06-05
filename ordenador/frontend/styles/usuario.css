@@ -1,7 +1,10 @@
 
 .principal-section-usuario{
-  background-color: var(--negroPrincipal) !important;
+  
+  background: linear-gradient(to right, #555555, #1d1d1d);
+  /* box-shadow: 0 -60px 60px 90px black; */
   padding-top: 50px;
+  z-index: 1000;
 }
 
 .containerUsuario {
@@ -12,13 +15,16 @@
   height: auto;
   padding: 25px;
   margin: 0 auto;
-  background: red;
+  background: var(--colorPrimario);
   border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 
 }
 
 .links {
   color: black !important;
+  cursor: pointer;
+  font: var(--cuerpoDeTexto);
 }
 
 .linksNavegacion {
