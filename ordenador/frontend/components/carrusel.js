@@ -1,5 +1,5 @@
 
-
+import "/styles/carrusel.css";
 
 export default function Carrusel(){
     return (
@@ -37,7 +37,7 @@ export default function Carrusel(){
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/eeuu/new york.jpg" alt="Foto 4" />
+            <img src="images/eeuu/newYork.jpg" alt="Foto 4" />
             <div class="carousel-caption">
               <div class="icon-carrusel2">2</div>
               <div class="description">

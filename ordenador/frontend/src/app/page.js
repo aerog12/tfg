@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Header from "../../components/header";
+import Carrusel from "../../components/carrusel";
 import "/styles/seccion-principal-index.css";
 import "/styles/headerTextContainer.css";
 import "/styles/footer.css";
@@ -65,6 +66,7 @@ export default function Home() {
         <h1>NUESTRAS CIUDADES MÁS DESTACADAS</h1>
         <div className="line-gray"></div>
         <div className="line-purple"></div>
+        <Carrusel />
         <section className="consejos-container">
           <h1>CONSEJOS</h1>
 

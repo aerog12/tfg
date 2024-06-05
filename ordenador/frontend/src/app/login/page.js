@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Header from "../../../components/header";
@@ -24,7 +24,6 @@ export default function Login() {
       }),
     });
 
-    
     let paginaRedirigida;
     if (email === "admin@admin" && password === "adminadmin") {
       paginaRedirigida = "/admin";
