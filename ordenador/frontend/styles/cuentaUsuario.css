@@ -1,0 +1,23 @@
+.formularioRegistro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: space-between;
+    gap: 30px;
+}   
+.name{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label{
+    font: var(--titulo);
+    margin-right: 10px;
+}
+input {
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--negroPrincipal);
+  font: var(--cuerpoDeTexto);
+}

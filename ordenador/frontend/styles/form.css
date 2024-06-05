@@ -62,8 +62,7 @@ a {
 }
 
 .form-container-login {
-  display: flex;
-  flex-direction: column;
+ 
   margin-right: 100px;
   height: 590px;
   width: 80%;
@@ -133,7 +132,7 @@ input {
 
 .action-button-form {
   position: relative; /* Para posicionar el botón y el borde adicional */
-  width: 123px;
+  width: 160px;
   height: 46px;
   padding: 10px 20px;
   color: var(--negroPrincipal);
