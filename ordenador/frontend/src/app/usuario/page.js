@@ -16,7 +16,7 @@ export default function Usuario() {
   const [informacionUsuario, setInformacionUsuario] = useState(null);
   const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
   const router = useRouter();
-  
+
   //comprobacion de si el usuario está logueado o no
   useEffect(() => {
     (async () => {
@@ -57,7 +57,7 @@ export default function Usuario() {
 
     fetchInformacionUsuario();
   }, [sitioLaravel]);
-
+  // cerrar sesion
   const cerrarSesion = async () => {
     try {
       const respuesta = await fetch(`${sitioLaravel}/cerrarSesion`, {
