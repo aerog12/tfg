@@ -57,6 +57,17 @@ class AuthController extends Controller
         $usuarios = User::all();
         return response()->json($usuarios, 200);
     }
+    //funcion para actualizar los campos de los usuarios
+    public function actualizarDatos(Request $request) {
+    $usuarioAutenticado = Auth::user();
+    $data = $request->only(['name', 'apellido1', 'apellido2', 'email', 'movil']);
+
+    $usuarioAutenticado->update($data);
+
+    return response()->json(['mensaje' => 'Datos actualizados', 'usuario' => $usuarioAutenticado], 200);
+}
+
+
     // funcion para que el admin pueda eliminar usuarios
     public function eliminarUsuario($id) {
         $usuarioAutenticado = Auth::user();

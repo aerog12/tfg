@@ -12,4 +12,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('usuario/{id}', [AuthController::class, 'eliminarUsuario']);
     Route::get('usuarios', [AuthController::class, 'obtenerUsuarios']);
     Route::get('mis-datos',[AuthController::class,'misDatos']);
+    Route::post('usuario/actualizar', [AuthController::class, 'actualizarDatos']);
 });
+

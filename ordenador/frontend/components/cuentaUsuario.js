@@ -5,127 +5,115 @@ import "/styles/cuentaUsuario.css";
 import "/styles/general.css";
 
 export default function CuentaUsuario() {
-  const [informacionUsuario, setInformacionUsuario] = useState(null);
+  const [informacionUsuario, setInformacionUsuario] = useState({
+    name: "",
+    apellido1: "",
+    apellido2: "",
+    email: "",
+    movil: "",
+  });
   const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
+
   useEffect(() => {
     const fetchInformacionUsuario = async () => {
       try {
-        // console.log(`Fetching from: ${sitioLaravel}/usuario`);
         const respuesta = await fetch(`${sitioLaravel}/usuario`, {
           credentials: "include",
         });
-        const text = await respuesta.text();
-        // console.log("Raw response text:", text);
-
         if (respuesta.ok) {
-          if (text) {
-            const informacion = JSON.parse(text);
-            // console.log("Información recibida:", informacion);
-            setInformacionUsuario(informacion);
-          } else {
-            // console.warn("La respuesta está vacía");
-          }
-        } else {
-          // console.error("Error en la respuesta de la API:", respuesta.status);
+          const informacion = await respuesta.json();
+          setInformacionUsuario(informacion);
         }
       } catch (error) {
-        // console.error("Error fetching admin information:", error);
+        console.error("Error fetching user information:", error);
       }
     };
 
     fetchInformacionUsuario();
   }, [sitioLaravel]);
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInformacionUsuario((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleUpdate = async (e, field) => {
+    e.preventDefault();
+    try {
+      const respuesta = await fetch(`${sitioLaravel}/usuario/actualizar`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({ [field]: informacionUsuario[field] }),
+      });
+
+      if (respuesta.ok) {
+        const data = await respuesta.json();
+        setInformacionUsuario(data.usuario);
+        alert("Datos actualizados");
+      } else {
+        console.error("Error updating user information:", respuesta.status);
+      }
+    } catch (error) {
+      console.error("Error updating user information:", error);
+    }
+  };
+
   return (
     <form className="formularioRegistro">
       <div className="name-container">
-        <div class="name">
-          <label class="mail-text" for="name">
-            NOMBRE
-          </label>
-          <div className="input-container-usuario">
-            <input
-              type="text"
-              id="name"
-              name="usuario"
-              placeholder={`${informacionUsuario?.name}`}
-            />
-            <button type="submit" className="botonActualizar">
-              <RefreshIcon />
-            </button>
+        {["name", "apellido1", "apellido2"].map((field) => (
+          <div className="name" key={field}>
+            <label className="mail-text" htmlFor={field}>
+              {field.toUpperCase()}
+            </label>
+            <div className="input-container-usuario">
+              <input
+                type="text"
+                id={field}
+                name={field}
+                value={informacionUsuario[field]}
+                onChange={handleChange}
+                placeholder={`Introduce nuevo ${field}`}
+              />
+              <button
+                type="submit"
+                className="botonActualizar"
+                onClick={(e) => handleUpdate(e, field)}
+              >
+                <RefreshIcon />
+              </button>
+            </div>
           </div>
-        </div>
-
-        <div class="name">
-          <label class="mail-text" for="apellido1">
-            PRIMER APELLIDO
-          </label>
-          <div className="input-container-usuario">
-            <input
-              type="text"
-              id="name"
-              name="usuario"
-              placeholder="Introduce nuevo primer apellido"
-            />
-            <button type="submit" className="botonActualizar">
-              <RefreshIcon />
-            </button>
-          </div>
-        </div>
-
-        <div class="name">
-          <label class="mail-text" for="apellido2">
-            SEGUNDO APELLIDO
-          </label>
-          <div className="input-container-usuario">
-            <input
-              type="text"
-              id="name"
-              name="usuario"
-              placeholder="Introduce nuevo segundo apellido"
-            />
-            <button type="submit" className="botonActualizar">
-              <RefreshIcon />
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
       <div className="info-container">
-        <div class="name">
-          <label class="mail-text" for="email">
-            EMAIL
-          </label>
-          <div className="input-container-usuario">
-            <input
-              type="email"
-              id="email"
-              name="correo"
-              autofocus
-              placeholder={`${informacionUsuario?.email}`}
-            />
-            <button type="submit" className="botonActualizar">
-              <RefreshIcon />
-            </button>
+        {["email", "movil"].map((field) => (
+          <div className="name" key={field}>
+            <label className="mail-text" htmlFor={field}>
+              {field.toUpperCase()}
+            </label>
+            <div className="input-container-usuario">
+              <input
+                type={field === "email" ? "email" : "text"}
+                id={field}
+                name={field}
+                value={informacionUsuario[field]}
+                onChange={handleChange}
+                placeholder={`Introduce nuevo ${field}`}
+              />
+              <button
+                type="submit"
+                className="botonActualizar"
+                onClick={(e) => handleUpdate(e, field)}
+              >
+                <RefreshIcon />
+              </button>
+            </div>
           </div>
-        </div>
-
-        <div class="name">
-          <label class="mail-text" for="movil">
-            NUMERO DE MOVIL
-          </label>
-          <div className="input-container-usuario">
-            <input
-              type="email"
-              id="email"
-              name="movil"
-              autofocus
-              placeholder="Introduce nuevo numero"
-            />
-            <button type="submit" className="botonActualizar">
-              <RefreshIcon />
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
     </form>
   );
