@@ -25,10 +25,10 @@ export default function Login() {
     });
 
     let paginaRedirigida;
-    if (email === "admin@admin" && password === "12345678") {
+    if (email === "admin@admin" && password === "adminadmin") {
       paginaRedirigida = "/admin";
     } else {
-      paginaRedirigida = "/admin";
+      paginaRedirigida = "/usuario";
     }
 
     router.push(paginaRedirigida);

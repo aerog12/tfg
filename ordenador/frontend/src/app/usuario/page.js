@@ -8,52 +8,56 @@ import GeneralBoton from "../../../components/general-boton";
 import Footer from "../../../components/footer";
 import "/styles/usuario.css";
 import "/styles/general.css";
+import { useRouter } from "next/navigation";
 
 export default function Usuario() {
+  const [estaLogueado, setEstaLogueado] = useState(false);
   const [formularioMostrado, setFormularioMostrado] = useState("usuario");
-
-  const cambiarAPassword = () => {
-    setFormularioMostrado("password");
-  };
-
-  const cambiarAUsuario = () => {
-    setFormularioMostrado("usuario");
-  };
-
-  /* ------------------------ */
-
   const [informacionUsuario, setInformacionUsuario] = useState(null);
   const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
+  const router = useRouter();
+  
+  //comprobacion de si el usuario está logueado o no
+  useEffect(() => {
+    (async () => {
+      try {
+        const respuesta = await fetch(`${sitioLaravel}/mis-datos`, {
+          credentials: "include",
+        });
+        const contenido = await respuesta.json();
+        if (contenido.email) {
+          setEstaLogueado(true);
+          return;
+        }
+      } catch (error) {
+        alert("hola buenas tardes");
+        router.push("/login");
+      }
+    })();
+  });
 
   useEffect(() => {
     const fetchInformacionUsuario = async () => {
       try {
-        // console.log(`Fetching from: ${sitioLaravel}/usuario`);
         const respuesta = await fetch(`${sitioLaravel}/usuario`, {
           credentials: "include",
         });
         const text = await respuesta.text();
-        // console.log("Raw response text:", text);
 
         if (respuesta.ok) {
           if (text) {
             const informacion = JSON.parse(text);
-            // console.log("Información recibida:", informacion);
             setInformacionUsuario(informacion);
-          } else {
-            // console.warn("La respuesta está vacía");
           }
-        } else {
-          // console.error("Error en la respuesta de la API:", respuesta.status);
         }
       } catch (error) {
-        // console.error("Error fetching admin information:", error);
+        console.error("Error fetching admin information:", error);
       }
     };
 
     fetchInformacionUsuario();
   }, [sitioLaravel]);
-  /*------------CERRAR SESION----------------*/;
+
   const cerrarSesion = async () => {
     try {
       const respuesta = await fetch(`${sitioLaravel}/cerrarSesion`, {
@@ -62,7 +66,7 @@ export default function Usuario() {
       });
       if (respuesta.ok) {
         setInformacionUsuario(null);
-        window.location.href = "/login"; // Cambia '/login' por la ruta deseada
+        window.location.href = "/"; // Cambia '/login' por la ruta deseada
       } else {
         console.error("Error al cerrar sesión:", respuesta.status);
       }
@@ -70,12 +74,20 @@ export default function Usuario() {
       console.error("Error al cerrar sesión:", error);
     }
   };
+  //constantes para ir cambiando entre forms
+  const cambiarAPassword = () => {
+    setFormularioMostrado("password");
+  };
+
+  const cambiarAUsuario = () => {
+    setFormularioMostrado("usuario");
+  };
 
   return (
     <div>
       <Header
         imagenFondo="/images/londres2.jpg"
-        isAuthenticated={true}
+        isAuthenticated={estaLogueado}
         texto1={<span className="texto-con-letter-spacing">¡ BIENVENID@ </span>}
         texto2={
           <span className="texto-con-letter-spacing2">
@@ -96,7 +108,6 @@ export default function Usuario() {
               <a className="links" onClick={cambiarAPassword}>
                 PASSWORD
               </a>
-              {/* <h1>hola {informacionUsuario?.name}</h1> */}
             </div>
             <div className="informacionUsuario">
               {formularioMostrado === "usuario" ? (
@@ -114,9 +125,9 @@ export default function Usuario() {
               <a>
                 <GeneralBoton textoBotonGeneral="Cancelar" />
               </a>
-              <button>Cerrar Sesión</button>
             </div>
           )}
+          <button onClick={cerrarSesion}>Cerrar Sesión</button>
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@ class AuthController extends Controller
         $usuarios = User::all();
         return response()->json($usuarios, 200);
     }
-
+    // funcion para que el admin pueda eliminar usuarios
     public function eliminarUsuario($id) {
         $usuarioAutenticado = Auth::user();
 
@@ -71,5 +71,9 @@ class AuthController extends Controller
             return response()->json(['mensaje' => 'Usuario eliminado'], 200);
         }
         return response()->json(['mensaje' => 'Usuario no encontrado'], 404);
+    }
+
+    public function misDatos(){
+        return Auth::user();
     }
 }
