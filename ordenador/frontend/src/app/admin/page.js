@@ -1,7 +1,8 @@
 "use client";
 import Header from "../../../components/header";
 import { useEffect, useState } from "react";
-
+import "/styles/admin.css";
+import "/styles/general.css";
 export default function Admin() {
   const [informacionAdmin, setInformacionAdmin] = useState(null);
   const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
@@ -73,23 +74,37 @@ export default function Admin() {
 
   return (
     <>
-      <Header />
-      <h1>Hola {informacionAdmin?.email}</h1>
-      <h2>Lista de Usuarios:</h2>
-      <ul>
-        {usuarios
-          .filter((usuario) => usuario.email !== informacionAdmin?.email) // Filtrar el administrador
-          .map((usuario) => (
-            <li key={usuario.id}>
-              {usuario.name} - {usuario.email}
-              {informacionAdmin?.email === "admin@admin" && (
-                <button onClick={() => eliminarUsuario(usuario.id)}>
-                  Eliminar
-                </button>
-              )}
-            </li>
-          ))}
-      </ul>
+      <Header
+        imagenFondo="/images/londres2.jpg"
+        // isAuthenticated={estaLogueado}
+        texto1={<span className="texto-con-letter-spacing">¡ BIENVENID@ </span>}
+        texto2={
+          <span className="texto-con-letter-spacing2">
+            {/* {`${informacionUsuario?.name}`} <span> !</span> */}
+          </span>
+        }
+        cuerpoTexto="¡Estas a punto de comenzar tu próxima aventura! Explora el mundo con nosotros y descubre destinos inolvidables. 🌍✈️"
+      />
+      <div className="container-admin">
+        <h1>Hola {informacionAdmin?.email}</h1>
+        <h2>Lista de Usuarios:</h2>
+
+        <ul>
+          {usuarios
+            .filter((usuario) => usuario.email !== informacionAdmin?.email) // Filtrar el administrador
+            .map((usuario) => (
+              <li key={usuario.id}>
+                {usuario.name} - {usuario.apellido1} - {usuario.apellido2} - -{" "}
+                {usuario.movil} - {usuario.email} -
+                {informacionAdmin?.email === "admin@admin" && (
+                  <button onClick={() => eliminarUsuario(usuario.id)}>
+                    Eliminar
+                  </button>
+                )}
+              </li>
+            ))}
+        </ul>
+      </div>
     </>
   );
 }
