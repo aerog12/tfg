@@ -67,7 +67,6 @@ export default function Register() {
               type="email"
               id="email"
               name="correo"
-              autoFocus
               placeholder="Introduce tu email"
               required
               value={email}
