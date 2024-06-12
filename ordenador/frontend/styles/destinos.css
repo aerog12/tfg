@@ -219,7 +219,12 @@ a {
 
 /* RESPONSIVE */
 
-@media (max-width: 1499px) {
+@media (max-width: 1350px) {
+  
+  .column{
+    flex-direction: column;
+  }
+  
   .card {
     width: 661px;
   }
