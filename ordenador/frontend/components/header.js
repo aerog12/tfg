@@ -17,7 +17,7 @@ export default function Header(props) {
       });
       if (respuesta.ok) {
         setInformacionUsuario(null);
-        window.location.href = "/"; // Cambia '/login' por la ruta deseada
+        window.location.href = "/";
       } else {
         console.error("Error al cerrar sesión:", respuesta.status);
       }

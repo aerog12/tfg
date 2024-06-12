@@ -84,28 +84,28 @@ export function IconYoutube() {
   );
 }
 
-export function Menu(){
-  return(
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="60px"
-    height="60px"
-    viewBox="0 0 24 24"
-  >
-    <path
-      fill="none"
-      stroke="#f5f5f7"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="1.5"
-      d="M10 5h10M4 12h16M4 19h10"
-      color="#f5f5f7"
-    />
-  </svg>
+export function Menu() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="60px"
+      height="60px"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="none"
+        stroke="#f5f5f7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        d="M10 5h10M4 12h16M4 19h10"
+        color="#f5f5f7"
+      />
+    </svg>
   );
 }
 
-export function RefreshIcon(){
+export function RefreshIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ export function RefreshIcon(){
   );
 }
 
-export function UserIcon(){
+export function UserIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
