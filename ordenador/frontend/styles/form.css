@@ -29,6 +29,11 @@ a {
 }
 
 .form-container-login {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 20px 30px;
+  z-index: 1000;
   height: 590px;
   width: 600px;
   padding: 80px 20px;
