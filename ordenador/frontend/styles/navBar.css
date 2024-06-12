@@ -49,8 +49,6 @@ a {
 }
 
 .navBar .toggle-button {
-  color: var(--blancoPrincipal);
-  font-size: 3rem;
   cursor: pointer;
   display: none;
 }
