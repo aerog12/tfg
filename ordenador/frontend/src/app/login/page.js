@@ -56,7 +56,6 @@ export default function Login() {
               type="email"
               id="email"
               name="correo"
-              autoFocus
               placeholder="Introduce tu email"
               required
               value={email}
