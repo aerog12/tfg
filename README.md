@@ -6,5 +6,6 @@
 
 # [video youtube](https://youtu.be/XVbUrjSLl8o)
 
-# Os he dejado aquí el enlace a netlify donde podéis ir viendo todos los cambios que va teniendo la página
-# [enlace a netlify](https://aerogtravel-desktop.netlify.app/)
+# Os he dejado aquí el enlace a vercel donde podéis ir viendo todos los cambios que va teniendo la página
+
+# [enlace a vercel](https://aerogtravel-desktop.vercel.app/)

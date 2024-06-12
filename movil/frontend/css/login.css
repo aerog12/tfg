@@ -24,6 +24,8 @@ a {
   height: 120px;
 }
 
+/* header/navbar */
+
 .navBar {
   width: 100%;
   height: fit-content; /* coge el contenido maximo y se adapta a el */
@@ -51,6 +53,8 @@ a {
   cursor: pointer;
   display: none;
 }
+
+/* botón */
 
 .action-button {
   position: relative; /* Para posicionar el botón y el borde adicional */
@@ -101,6 +105,8 @@ a {
   margin: 0 0 0 260px !important;
   text-shadow: 2px 2px 10px black;
 }
+
+/* FORM */
 
 .form-container {
   display: flex;
@@ -170,7 +176,7 @@ input {
   color: var(--negroPrincipal);
   font: var(--cuerpoDeTexto);
 }
-/* CREAR CLASES PARA LOS BOTONES DE ABAJO DEL LOGIN PARA PODER DAR MARGENES */
+
 .btn-createAccount {
   color: var(--negroPrincipal);
   font: var(--cuerpoDeTexto);

@@ -1,3 +1,7 @@
+h1{
+  font: var(--titulo);
+}
+
 .ultimos-post-container {
   margin: 30px auto;
   text-align: center;

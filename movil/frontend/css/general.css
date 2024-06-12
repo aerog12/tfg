@@ -1,3 +1,62 @@
+/****************************************/
+/* ATOMS - PERSONALITY CONSISTENCY  SYSTEM*/
+/****************************************/
+/*
+
+---01 TYPOGRAPHY SYSTEM / ATOM
+
+     - Font family
+    
+     "https://fonts.google.com"
+    "https://fonts.googleapis.com/css2?family=Francois+One&display=swap"
+    "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+
+    
+  --fuenteTitulos: "Francois One", sans-serif;
+  --fuenteNav: "Bebas Neue", cursive;
+  --fuenteCuerpoDeTexto: "Open Sans", sans-serif;
+     
+    - Font sizes (px)
+
+   X2 =  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+   X5 =  5 / 10 / 15 / 20 / 25 / 30 / 35 / 40 / 45 / 50 / 55 / 60 / 65 / 70 / 75 / 80
+
+    - Font weights
+      Default: 400
+      Medium: 500
+      Semibold: 600
+      Bold: 700
+
+
+    - Font line heights:
+      Default: 1;
+      Small: 1.05
+      Medium: 1.2
+      Paragrah default: 1.6
+
+    - Colors: 
+
+  --negroPrincipal: #424242;
+
+  --blancoPrincipal: #f5f5f7;
+      
+  --colorPrimario: #437bfb;
+ 
+  --grisPrincipal: #bbbbbb;
+  
+  --degradado: #c2d3ff;
+
+
+---03 IMAGES SYSTEM / ATOM
+
+    https://fontawesome.com/icons/cloudflare?f=brands&s=solid
+
+
+---05 BORDER RADIUS
+   Default: 10px
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
@@ -37,7 +96,6 @@ html {
 body {
   background-color: var(--blancoPrincipal);
 }
-
 
 .title-container {
   display: flex;
@@ -111,7 +169,7 @@ body {
   display: none;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
-  
+
   overflow: hidden;
   transition: all 1.5s ease;
   z-index: 1111;
@@ -195,8 +253,6 @@ body {
 }
 
 @media (max-width: 880px) {
-  
-
   .navBar .links,
   .navBar .action-button {
     display: none;
@@ -210,26 +266,24 @@ body {
     display: block;
     z-index: 11111 !important;
   }
-
-  
 }
 
 @media (max-width: 500px) {
-    .titulo-register-2 {
-      margin: 0 auto !important;
-    }
+  .titulo-register-2 {
+    margin: 0 auto !important;
+  }
 
-    .titulo-register {
-      margin: 0 auto !important;
-    }
+  .titulo-register {
+    margin: 0 auto !important;
+  }
 
-    .title-container {
-      margin-top: 75px;
-      background: none;
-      text-align: center !important;
-    }
+  .title-container {
+    margin-top: 75px;
+    background: none;
+    text-align: center !important;
+  }
 
-    header::after {
+  header::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -240,7 +294,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
   }
-  }
+}
 /* Responsive */
 
 @media (max-width: 1030px) {
@@ -283,5 +337,4 @@ body {
     font-size: 3.5rem !important;
     text-align: center !important;
   }
-
 }

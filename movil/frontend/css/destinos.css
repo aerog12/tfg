@@ -12,9 +12,46 @@ p{
   font-size: 2rem !important;
 }
 
+/* header/navbar */
+
 .titulo-register-2 {
   margin: 0 0 0 100px !important;
 }
+
+.logo {
+  width: 120px;
+  height: 120px;
+}
+
+.navBar {
+  width: 100%;
+  height: fit-content; /* coge el contenido maximo y se adapta a el */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar .nav a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navBar .links {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.navBar .toggle-button {
+  color: var(--blancoPrincipal);
+  font-size: 1rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* CARDS DESTINOS */
 
 .rows-destinos {
   display: flex;
@@ -70,38 +107,7 @@ a {
   font: var(--titulo);
 }
 
-.logo {
-  width: 120px;
-  height: 120px;
-}
-
-.navBar {
-  width: 100%;
-  height: fit-content; /* coge el contenido maximo y se adapta a el */
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navBar .nav a {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navBar .links {
-  display: flex;
-  align-items: center;
-  gap: 6rem;
-}
-
-.navBar .toggle-button {
-  color: var(--blancoPrincipal);
-  font-size: 1rem;
-  cursor: pointer;
-  display: none;
-}
+/* boton */
 
 .action-button {
   position: relative; /* Para posicionar el botón y el borde adicional */
