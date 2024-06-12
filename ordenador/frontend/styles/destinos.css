@@ -1,23 +1,9 @@
-
-p{
+p {
   font-size: 2rem !important;
 }
 
 .titulo-register-2 {
   margin: 0 0 0 100px !important;
-}
-
-.rows-destinos {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.card-destinos {
-  position: relative;
-  width: 661px;
-  height: 580px;
-  margin: 35px 35px;
 }
 
 .fondoContornoJapon {
@@ -241,13 +227,13 @@ a {
   }
 }
 
-@media(max-width: 464px) {
+@media (max-width: 464px) {
   .card {
     height: 500px;
   }
 }
 
-@media(max-width: 360px) {
+@media (max-width: 360px) {
   .card {
     height: 400px;
   }
@@ -255,5 +241,4 @@ a {
   .card.card-column1-der {
     margin-top: 200px;
   }
-
 }
