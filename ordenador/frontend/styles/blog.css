@@ -49,12 +49,6 @@ h2 {
   gap: 6rem;
 }
 
-.navBar .toggle-button {
-  color: var(--blancoPrincipal);
-  font-size: 1rem;
-  cursor: pointer;
-  display: none;
-}
 
 .vertical-title {
   writing-mode: vertical-rl; /* Este valor indica que el texto se escribirá verticalmente de arriba hacia abajo */

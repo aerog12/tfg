@@ -40,12 +40,6 @@ a {
   gap: 6rem;
 }
 
-.navBar .toggle-button {
-  color: var(--blancoPrincipal);
-  font-size: 1rem;
-  cursor: pointer;
-  display: none;
-}
 
 .btn-container {
   display: flex;
