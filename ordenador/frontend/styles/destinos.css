@@ -6,40 +6,13 @@ p {
   margin: 0 0 0 100px !important;
 }
 
-.column.column1 {
+.column {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 30px 0;
     gap: 15px;
 }
-
-.column.column2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 0;
-    gap: 15px;
-}
-
-.column.column3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 0;
-    gap: 15px;
-}
-
-.column.column4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 0;
-    gap: 15px;
-}
-
-
-
 
 .fondoContornoJapon {
   position: absolute;
