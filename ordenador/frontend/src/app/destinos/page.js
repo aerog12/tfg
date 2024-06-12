@@ -14,7 +14,7 @@ export default function Destinos() {
       />
 
       <div className="principal-section">
-        <div className="column column1">
+        <div className="column">
           <div className="card card-column1-izq">
             <h3 className="card-column1-izq-titulo">MEJORES DESTINOS</h3>
             <div className="card-column1-izq-subtitulo">
@@ -62,7 +62,7 @@ export default function Destinos() {
           </a>
         </div>
 
-        <div className="column column2">
+        <div className="column">
           <a href="">
             <div className="card card-column2-izq">
               <div className="text-container">
@@ -98,7 +98,7 @@ export default function Destinos() {
           </a>
         </div>
 
-        <div className="column column3">
+        <div className="column">
           <a href="">
             <div className="card card-column3-izq">
               <div className="text-container">
@@ -134,7 +134,7 @@ export default function Destinos() {
           </a>
         </div>
 
-        <div className="column column4">
+        <div className="column">
           <a href="">
             <div className="card card-column4-izq">
               <div className="text-container">
