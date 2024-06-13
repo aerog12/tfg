@@ -70,9 +70,8 @@ a {
 }
 
 .dropdown-menu {
-   /* Hidden by default */
   margin: 60px auto;
-  width: 600px;
+  width: 90%;
   height: auto;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);

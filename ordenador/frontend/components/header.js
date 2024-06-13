@@ -14,7 +14,6 @@ export default function Header(props) {
   const router = useRouter();
 
   useEffect(() => {
-    // Check if the user is logged in when the component mounts
     (async () => {
       try {
         const respuesta = await fetch(`${sitioLaravel}/mis-datos`, {
@@ -68,7 +67,7 @@ export default function Header(props) {
   };
 
   const toggleMenu = (event) => {
-    event.stopPropagation(); // Prevent this event from closing the menu
+    event.stopPropagation();
     setMenuAbierto(!menuAbierto);
   };
 
@@ -117,46 +116,45 @@ export default function Header(props) {
         <div className="toggle-button" onClick={toggleMenu}>
           <Menu />
         </div>
-
-        {menuAbierto && (
-          <div className="dropdown-menu">
-            <div className="dropdown-content">
-              <ul>
-                <li>
-                  <a href="/destinos">Destinos</a>
-                </li>
-                <li>
-                  <a href="/blog">Blog</a>
-                </li>
-                <li>
-                  <a href="/tienda">Tienda</a>
-                </li>
-                {estaLogueado ? (
-                  <>
-                    <li>
-                      <a onClick={cerrarSesion}>Cerrar Sesión</a>
-                    </li>
-                    <li>
-                      <a href="/usuario">Mi Perfil</a>
-                    </li>
-                  </>
-                ) : (
-                  <>
-                    <li>
-                      <a href="/login">Iniciar Sesión</a>
-                    </li>
-                    <li>
-                      <a href="/register">Regístrate</a>
-                    </li>
-                  </>
-                )}
-              </ul>
-            </div>
-          </div>
-        )}
       </div>
+      {menuAbierto && (
+        <div className="dropdown-menu">
+          <div className="dropdown-content">
+            <ul>
+              <li>
+                <a href="/destinos">Destinos</a>
+              </li>
+              <li>
+                <a href="/blog">Blog</a>
+              </li>
+              <li>
+                <a href="/tienda">Tienda</a>
+              </li>
+              {estaLogueado ? (
+                <>
+                  <li>
+                    <a onClick={cerrarSesion}>Cerrar Sesión</a>
+                  </li>
+                  <li>
+                    <a href="/usuario">Mi Perfil</a>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <a href="/login">Iniciar Sesión</a>
+                  </li>
+                  <li>
+                    <a href="/register">Regístrate</a>
+                  </li>
+                </>
+              )}
+            </ul>
+          </div>
+        </div>
+      )}
 
-      <div className="titulo-form-container">
+      <div className="header-text-container">
         {/* TEXTO DEL HEADER */}
         <HeaderTextContainer
           texto1={props.texto1}
