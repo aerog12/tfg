@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { Wallet, Gift, HeadSet} from "../../../components/icons";
 import Header from "../../../components/header";
 import GeneralBoton from "../../../components/general-boton";
 import "/styles/tienda.css";
@@ -34,7 +35,7 @@ export default function Tienda() {
           <a href="#">
             <div className="contrarreembolso">
               <div className="shop-links">
-                <i className="fa-solid fa-wallet"></i>
+                <Wallet />
               </div>
               <div className="contrarreembolso-text">
                 <p className="shop-title">Contrarreembolso</p>
@@ -45,7 +46,7 @@ export default function Tienda() {
           <a href="#">
             <div className="regalo">
               <div className="shop-links">
-                <i className="fa-solid fa-gift"></i>
+                <Gift />
               </div>
               <div className="regalo-text">
                 <p className="shop-title">Tarjeta de regalo</p>
@@ -56,7 +57,7 @@ export default function Tienda() {
           <a href="#">
             <div className="atencionCliente">
               <div className="shop-links">
-                <i className="fa-solid fa-headset"></i>
+                <HeadSet />
               </div>
               <div className="atencionCliente-text">
                 <p className="shop-title">Atención al cliente</p>
@@ -84,8 +85,7 @@ export default function Tienda() {
                 <h3>PRECIO : 9.90 €</h3>
               </div>
               <p className="guide-information">
-                CONOCIENDO UNA DE LAS CIUDADES MÁS POPULARES DE
-                JAPÓN
+                CONOCIENDO UNA DE LAS CIUDADES MÁS POPULARES DE JAPÓN
               </p>
               <a href="/register">
                 <GeneralBoton textoBotonGeneral="COMPRAR" />
@@ -104,9 +104,7 @@ export default function Tienda() {
                 <i className="fa-solid fa-dollar-sign card-guide-icons"></i>
                 <h3>PRECIO : 7.80 €</h3>
               </div>
-              <p className="guide-information">
-                LA CIUDAD QUE NO DUERME
-              </p>
+              <p className="guide-information">LA CIUDAD QUE NO DUERME</p>
               <a href="/register">
                 <GeneralBoton textoBotonGeneral="COMPRAR" />
               </a>

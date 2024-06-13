@@ -40,7 +40,6 @@ a {
   gap: 6rem;
 }
 
-
 .btn-container {
   display: flex;
   flex-wrap: wrap;
@@ -349,19 +348,19 @@ a {
     height: 300px;
   }
 
-  .guide-information{
+  .guide-information {
     font-size: 1.5rem;
   }
 
-  .contrarreembolso{
-   width: 280px;
-  }
-
-  .regalo{
+  .contrarreembolso {
     width: 280px;
   }
 
-  .atencionCliente{
+  .regalo {
+    width: 280px;
+  }
+
+  .atencionCliente {
     width: 280px;
   }
 }
