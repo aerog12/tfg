@@ -47,3 +47,9 @@ input {
   }
 }
 
+@media (max-width: 450px) {
+  .formularioRegistros {
+    display: flex;
+  }
+}
+
