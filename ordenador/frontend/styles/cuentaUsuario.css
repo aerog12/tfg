@@ -41,14 +41,14 @@ input {
 /* Responsive */
 
 @media (max-width: 650px) {
-  .formularioRegistros {
+  .formularioRegistro {
     display: flex;
     padding: 20px;
   }
 }
 
 @media (max-width: 450px) {
-  .formularioRegistros {
+  .formularioRegistro {
     display: flex;
   }
 }
