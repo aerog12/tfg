@@ -30,7 +30,7 @@ export default function Usuario() {
           return;
         }
       } catch (error) {
-        alert("hola buenas tardes");
+        alert("Necesitas iniciar sesión");
         router.push("/login");
       }
     })();
