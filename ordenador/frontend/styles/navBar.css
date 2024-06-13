@@ -109,7 +109,7 @@ a {
 }
 
 .dropdown-menu ul li a:hover {
-  color: var(--highlightColor); /* Add your highlight color variable */
+  color: var(--colorPrimario);
 }
 
 @media (max-width: 880px) {
