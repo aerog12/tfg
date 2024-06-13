@@ -88,8 +88,8 @@ export function Menu() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="60px"
-      height="60px"
+      width="50px"
+      height="50px"
       viewBox="0 0 24 24"
     >
       <path
@@ -140,7 +140,7 @@ export function UserIcon() {
   );
 }
 
-export function Wallet(){
+export function Wallet() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ export function Wallet(){
   );
 }
 
-export function Gift(){
+export function Gift() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@ export function Gift(){
   );
 }
 
-export function HeadSet(){
+export function HeadSet() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -186,6 +186,42 @@ export function HeadSet(){
       <path
         fill="#437bfb"
         d="M2.5 6a2.49 2.49 0 0 0-1.414.438a6.502 6.502 0 0 1 12.828 0A2.488 2.488 0 0 0 12.5 6A1.5 1.5 0 0 0 11 7.5v4a1.5 1.5 0 0 0 .947 1.395A1.5 1.5 0 0 1 10.5 14H8v1h2.5a2.5 2.5 0 0 0 2.458-2.042A2.5 2.5 0 0 0 15 10.5v-3a7.5 7.5 0 0 0-15 0v3A2.5 2.5 0 0 0 2.5 13A1.5 1.5 0 0 0 4 11.5v-4A1.5 1.5 0 0 0 2.5 6"
+      />
+    </svg>
+  );
+}
+
+export function Dollar() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30px"
+      height="30px"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="none"
+        stroke="#f5f5f7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        d="M16.154 7.154c-.949-.949-2.619-1.608-4.154-1.65m-4.154 10.65c.893 1.19 2.552 1.868 4.154 1.926m0-12.576c-1.826-.049-3.461.778-3.461 3.034c0 4.154 7.615 2.077 7.615 6.231c0 2.37-2.027 3.387-4.154 3.31m0-12.575V3m0 15.08V21"
+      />
+    </svg>
+  );
+}
+
+export function Book() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30px"
+      height="30px"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="#f5f5f7"
+        d="M6 22q-1.25 0-2.125-.875T3 19V5q0-1.25.875-2.125T6 2h9q.825 0 1.413.588T17 4v12q0 .825-.587 1.413T15 18H6q-.425 0-.712.288T5 19t.288.713T6 20h13V5q0-.425.288-.712T20 4t.713.288T21 5v15q0 .825-.587 1.413T19 22zm3-6h6V4H9zm-2 0V4H6q-.425 0-.712.288T5 5v11.175q.25-.075.488-.125T6 16zM5 4v12.175z"
       />
     </svg>
   );

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { Wallet, Gift, HeadSet} from "../../../components/icons";
+import { Wallet, Gift, HeadSet, Dollar, Book} from "../../../components/icons";
 import Header from "../../../components/header";
 import GeneralBoton from "../../../components/general-boton";
 import "/styles/tienda.css";
@@ -77,11 +77,11 @@ export default function Tienda() {
               <h3 className="text-container-titulo">OSAKA :</h3>
               <h3 className="text-container-titulo-morado">GUÍA COMPLETA</h3>
               <div className="guide-pages">
-                <i className="fa-regular fa-file card-guide-icons"></i>
+                <Book />
                 <h3>PÁGINAS : 30</h3>
               </div>
               <div className="guide-price">
-                <i className="fa-solid fa-dollar-sign card-guide-icons"></i>
+                <Dollar />
                 <h3>PRECIO : 9.90 €</h3>
               </div>
               <p className="guide-information">
@@ -97,11 +97,11 @@ export default function Tienda() {
               <h3 className="text-container-titulo">NUEVA YORK :</h3>
               <h3 className="text-container-titulo-morado">GUÍA COMPLETA</h3>
               <div className="guide-pages">
-                <i className="fa-regular fa-file card-guide-icons"></i>
+                <Book />
                 <h3>PÁGINAS : 23</h3>
               </div>
               <div className="guide-price">
-                <i className="fa-solid fa-dollar-sign card-guide-icons"></i>
+                <Dollar />
                 <h3>PRECIO : 7.80 €</h3>
               </div>
               <p className="guide-information">LA CIUDAD QUE NO DUERME</p>
@@ -115,11 +115,11 @@ export default function Tienda() {
               <h3 className="text-container-titulo">LONDRES :</h3>
               <h3 className="text-container-titulo-morado">GUÍA COMPLETA</h3>
               <div className="guide-pages">
-                <i className="fa-regular fa-file card-guide-icons"></i>
+                <Book />
                 <h3>PÁGINAS : 45</h3>
               </div>
               <div className="guide-price">
-                <i className="fa-solid fa-dollar-sign card-guide-icons"></i>
+                <Dollar />
                 <h3>PRECIO : 12.90 €</h3>
               </div>
               <p className="guide-information">
@@ -135,11 +135,11 @@ export default function Tienda() {
               <h3 className="text-container-titulo">ROMA :</h3>
               <h3 className="text-container-titulo-morado">GUÍA COMPLETA</h3>
               <div className="guide-pages">
-                <i className="fa-regular fa-file card-guide-icons"></i>
+                <Book />
                 <h3>PÁGINAS : 15</h3>
               </div>
               <div className="guide-price">
-                <i className="fa-solid fa-dollar-sign card-guide-icons"></i>
+                <Dollar />
                 <h3>PRECIO : 5.50 €</h3>
               </div>
               <p className="guide-information">
