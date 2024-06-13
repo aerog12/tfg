@@ -5,10 +5,32 @@ import a from "next/link";
 import { Menu } from "./icons.js";
 import HeaderTextContainer from "./header-text-container";
 import GeneralBoton from "./general-boton";
+import { useRouter } from "next/navigation";
 
 export default function Header(props) {
   const [estaLogueado, setEstaLogueado] = useState(false);
-  // cerrar sesion
+  const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
+  const router = useRouter();
+
+  useEffect(() => {
+    // Check if the user is logged in when the component mounts
+    (async () => {
+      try {
+        const respuesta = await fetch(`${sitioLaravel}/mis-datos`, {
+          credentials: "include",
+        });
+        const contenido = await respuesta.json();
+        if (contenido.email) {
+          setEstaLogueado(true);
+        } else {
+          setEstaLogueado(false);
+        }
+      } catch (error) {
+        console.error("Error checking login status:", error);
+      }
+    })();
+  }, [sitioLaravel]);
+
   const cerrarSesion = async () => {
     try {
       const respuesta = await fetch(`${sitioLaravel}/cerrarSesion`, {
@@ -16,8 +38,8 @@ export default function Header(props) {
         credentials: "include",
       });
       if (respuesta.ok) {
-        setInformacionUsuario(null);
-        window.location.href = "/";
+        setEstaLogueado(false);
+        router.push("/"); // Redirect to home page after logout
       } else {
         console.error("Error al cerrar sesión:", respuesta.status);
       }
@@ -25,7 +47,6 @@ export default function Header(props) {
       console.error("Error al cerrar sesión:", error);
     }
   };
-  //constantes para ir cambiando entre forms
 
   return (
     <header style={{ backgroundImage: `url(${props.imagenFondo})` }}>
@@ -50,9 +71,9 @@ export default function Header(props) {
             <a href="/tienda">Tienda</a>
           </li>
         </ul>
-        {props.isAuthenticated ? (
+        {estaLogueado ? (
           <>
-            <a href="/login">
+            <a onClick={cerrarSesion}>
               <GeneralBoton textoBotonGeneral="Cerrar Sesión" />
             </a>
             <a href="/usuario">
