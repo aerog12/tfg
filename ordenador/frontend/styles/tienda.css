@@ -202,10 +202,12 @@ a {
 }
 
 .card-guide-icons {
-  height: 60px;
-  width: 60px;
+  height: 55px;
+  width: 55px;
   text-align: center;
-  padding-top: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(66, 66, 66, 0.5);
   color: var(--blancoPrincipal);
   border: 2px dashed var(--blancoPrincipal);
