@@ -57,23 +57,6 @@ export default function Usuario() {
 
     fetchInformacionUsuario();
   }, [sitioLaravel]);
-  // cerrar sesion
-  const cerrarSesion = async () => {
-    try {
-      const respuesta = await fetch(`${sitioLaravel}/cerrarSesion`, {
-        method: "POST",
-        credentials: "include",
-      });
-      if (respuesta.ok) {
-        setInformacionUsuario(null);
-        window.location.href = "/"; // Cambia '/login' por la ruta deseada
-      } else {
-        console.error("Error al cerrar sesión:", respuesta.status);
-      }
-    } catch (error) {
-      console.error("Error al cerrar sesión:", error);
-    }
-  };
   //constantes para ir cambiando entre forms
   const cambiarAPassword = () => {
     setFormularioMostrado("password");
@@ -127,7 +110,7 @@ export default function Usuario() {
               </a>
             </div>
           )}
-          <button onClick={cerrarSesion}>Cerrar Sesión</button>
+          
         </div>
       </div>
     </div>
