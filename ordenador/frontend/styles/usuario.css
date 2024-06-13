@@ -1,6 +1,4 @@
-
-.principal-section-usuario{
-  
+.principal-section-usuario {
   background: linear-gradient(to right, #555555, #1d1d1d);
   /* box-shadow: 0 -60px 60px 90px black; */
   padding-top: 50px;
@@ -48,7 +46,7 @@
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
-.informacionContainer{
+.informacionContainer {
   display: flex;
   gap: 20px;
 }
@@ -70,12 +68,11 @@
 
 /* Responsive */
 
-@media(max-width: 956px) {
-  
-.informacionContainer{
+@media (max-width: 956px) {
+  .informacionContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+}
 
- flex-direction: column; 
- align-items: center;
- gap: 50px;
-}
-}

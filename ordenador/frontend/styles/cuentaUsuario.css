@@ -37,3 +37,13 @@ input {
   border: 1px solid var(--negroPrincipal);
   font: var(--cuerpoDeTexto);
 }
+
+/* Responsive */
+
+@media (max-width: 650px) {
+  .formularioRegistros {
+    display: flex;
+    padding: 20px;
+  }
+}
+
