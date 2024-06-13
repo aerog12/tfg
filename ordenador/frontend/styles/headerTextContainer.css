@@ -32,19 +32,18 @@
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 500px) {
-    .titulo-register-2 {
-      margin: 0 auto !important;
-    }
-
-    .titulo-register {
-      margin: 0 auto;
-      
-    }
-
-    .title-container {
-      margin-top: 75px;
-      background: none;
-      text-align: center;
-    }
+@media (max-width: 700px) {
+  .titulo-register-2 {
+    margin: 0 auto !important;
   }
+
+  .titulo-register {
+    margin: 0 auto;
+  }
+
+  .title-container {
+    margin-top: 75px;
+    background: none;
+    text-align: center;
+  }
+}

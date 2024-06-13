@@ -88,9 +88,9 @@ export default function Usuario() {
               <a className="links" onClick={cambiarAUsuario}>
                 CUENTA
               </a>
-              <a className="links" onClick={cambiarAPassword}>
+              {/* <a className="links" onClick={cambiarAPassword}>
                 PASSWORD
-              </a>
+              </a> */}
             </div>
             <div className="informacionUsuario">
               {formularioMostrado === "usuario" ? (
@@ -100,7 +100,7 @@ export default function Usuario() {
               )}
             </div>
           </div>
-          {formularioMostrado === "password" && (
+          {/* {formularioMostrado === "password" && (
             <div className="containerBotones">
               <a>
                 <GeneralBoton textoBotonGeneral="Actualizar" />
@@ -109,7 +109,7 @@ export default function Usuario() {
                 <GeneralBoton textoBotonGeneral="Cancelar" />
               </a>
             </div>
-          )}
+          )} */}
           
         </div>
       </div>

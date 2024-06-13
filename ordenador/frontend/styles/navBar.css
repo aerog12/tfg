@@ -48,11 +48,6 @@ a {
   width: fit-content;
 }
 
-.navBar .toggle-button {
-  cursor: pointer;
-  display: none;
-}
-
 .texto-con-letter-spacing {
   letter-spacing: 0.3rem;
   text-transform: uppercase;
@@ -67,23 +62,72 @@ a {
   color: var(--blancoPrincipal);
 }
 
+
+/* navBar.css */
+
+/* Existing styles ... */
+
+.navBar .toggle-button {
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown-menu {
+   /* Hidden by default */
+  margin: 60px auto;
+  width: 600px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.dropdown-content {
+  text-align: center;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.dropdown-menu ul li {
+  margin: 20px 0;
+}
+
+.dropdown-menu ul li a {
+  color: var(--blancoPrincipal);
+  font-size: 2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.dropdown-menu ul li a:hover {
+  color: var(--highlightColor); /* Add your highlight color variable */
+}
+
 @media (max-width: 880px) {
   .navBar ul.links,
   .navBar .action-button {
     display: none;
   }
 
-  .navBar .toggle-button{
+  .navBar .toggle-button {
     display: block;
   }
 
   .dropdown-menu {
-    display: block;
-    z-index: 11111 !important;
+    display: flex;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .titulo-register-2 {
     margin: 0 auto !important;
   }
@@ -110,3 +154,4 @@ a {
     backdrop-filter: blur(2px);
   }
 }
+

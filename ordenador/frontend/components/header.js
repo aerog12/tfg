@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 
 export default function Header(props) {
   const [estaLogueado, setEstaLogueado] = useState(false);
+  const [menuAbierto, setMenuAbierto] = useState(false);
   const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
   const router = useRouter();
 
@@ -31,6 +32,24 @@ export default function Header(props) {
     })();
   }, [sitioLaravel]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuAbierto &&
+        !event.target.closest(".dropdown-menu") &&
+        !event.target.closest(".toggle-button")
+      ) {
+        setMenuAbierto(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menuAbierto]);
+
   const cerrarSesion = async () => {
     try {
       const respuesta = await fetch(`${sitioLaravel}/cerrarSesion`, {
@@ -46,6 +65,11 @@ export default function Header(props) {
     } catch (error) {
       console.error("Error al cerrar sesión:", error);
     }
+  };
+
+  const toggleMenu = (event) => {
+    event.stopPropagation(); // Prevent this event from closing the menu
+    setMenuAbierto(!menuAbierto);
   };
 
   return (
@@ -90,9 +114,46 @@ export default function Header(props) {
             </a>
           </>
         )}
-        <div className="toggle-button">
+        <div className="toggle-button" onClick={toggleMenu}>
           <Menu />
         </div>
+
+        {menuAbierto && (
+          <div className="dropdown-menu">
+            <div className="dropdown-content">
+              <ul>
+                <li>
+                  <a href="/destinos">Destinos</a>
+                </li>
+                <li>
+                  <a href="/blog">Blog</a>
+                </li>
+                <li>
+                  <a href="/tienda">Tienda</a>
+                </li>
+                {estaLogueado ? (
+                  <>
+                    <li>
+                      <a onClick={cerrarSesion}>Cerrar Sesión</a>
+                    </li>
+                    <li>
+                      <a href="/usuario">Mi Perfil</a>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li>
+                      <a href="/login">Iniciar Sesión</a>
+                    </li>
+                    <li>
+                      <a href="/register">Regístrate</a>
+                    </li>
+                  </>
+                )}
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="titulo-form-container">
