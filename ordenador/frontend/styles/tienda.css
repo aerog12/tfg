@@ -111,6 +111,7 @@ a {
 .shop-text {
   font: var(--cuerpoDeTexto);
   color: var(--negroPrincipal);
+  font-size: 1.5rem !important;
 }
 
 .card-shop {
