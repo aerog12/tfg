@@ -1,0 +1,36 @@
+.container-imagen-perfil {
+  width: 150px;
+  height: 150px;
+  background-color: var(--colorPrimario);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+margin: 40px auto;
+  justify-content: center;
+}
+.imagen-perfil {
+  width: 150px;
+  height: 80px;
+}
+
+label {
+  font: var(--titulo);
+  font-size: 2rem;
+}
+
+input {
+  font: var(--cuerpoDeTexto);
+  font-size: 2rem;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid var(--negroPrincipal);
+  width: 90%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
