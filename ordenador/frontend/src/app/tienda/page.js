@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { Wallet, Gift, HeadSet, Dollar, Book} from "../../../components/icons";
+import { Wallet, Gift, HeadSet, Dollar, Book } from "../../../components/icons";
 import Header from "../../../components/header";
 import GeneralBoton from "../../../components/general-boton";
 import "/styles/tienda.css";
@@ -12,12 +12,26 @@ const bgImages = [
   "/images/Roma.jpg",
 ];
 
+const categoryImages = [
+  "/images/comida.jpg",
+  "/images/japon/kyotoñ.jpg",
+  "/images/santorini.jpg",
+  "/images/explorar.jpg",
+];
+
 export default function Tienda() {
   useEffect(() => {
     const cards = document.querySelectorAll(".card-shop");
     cards.forEach((card, index) => {
       if (bgImages[index]) {
         card.style.backgroundImage = `url(${bgImages[index]})`;
+      }
+    });
+
+    const categoryCards = document.querySelectorAll(".contenido-categorias");
+    categoryCards.forEach((card, index) => {
+      if (categoryImages[index]) {
+        card.style.backgroundImage = `url(${categoryImages[index]})`;
       }
     });
   }, []);

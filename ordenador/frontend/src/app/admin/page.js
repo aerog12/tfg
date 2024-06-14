@@ -3,6 +3,7 @@ import Header from "../../../components/header";
 import { useEffect, useState } from "react";
 import "/styles/admin.css";
 import "/styles/general.css";
+
 export default function Admin() {
   const [informacionAdmin, setInformacionAdmin] = useState(null);
   const sitioLaravel = process.env.NEXT_PUBLIC_SITIO_LARAVEL;
@@ -104,38 +105,44 @@ export default function Admin() {
       <div className="container-admin">
         <div className="background-table">
           <h2>Lista de Usuarios:</h2>
-          <table className="user-table">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Apellido 1</th>
-                <th>Apellido 2</th>
-                <th>Email</th>
-                <th>Móvil</th>
-                {informacionAdmin?.email === "admin@admin" && <th>Acciones</th>}
-              </tr>
-            </thead>
-            <tbody>
-              {usuariosActuales
-                .filter((usuario) => usuario.email !== informacionAdmin?.email)
-                .map((usuario) => (
-                  <tr key={usuario.id}>
-                    <td>{usuario.name}</td>
-                    <td>{usuario.apellido1}</td>
-                    <td>{usuario.apellido2}</td>
-                    <td>{usuario.email}</td>
-                    <td>{usuario.movil}</td>
-                    {informacionAdmin?.email === "admin@admin" && (
-                      <td>
-                        <button onClick={() => eliminarUsuario(usuario.id)}>
-                          Eliminar
-                        </button>
-                      </td>
-                    )}
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+          <div className="table-responsive">
+            <table className="user-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Apellido 1</th>
+                  <th>Apellido 2</th>
+                  <th>Email</th>
+                  <th>Móvil</th>
+                  {informacionAdmin?.email === "admin@admin" && (
+                    <th>Acciones</th>
+                  )}
+                </tr>
+              </thead>
+              <tbody>
+                {usuariosActuales
+                  .filter(
+                    (usuario) => usuario.email !== informacionAdmin?.email
+                  )
+                  .map((usuario) => (
+                    <tr key={usuario.id}>
+                      <td>{usuario.name}</td>
+                      <td>{usuario.apellido1}</td>
+                      <td>{usuario.apellido2}</td>
+                      <td>{usuario.email}</td>
+                      <td>{usuario.movil}</td>
+                      {informacionAdmin?.email === "admin@admin" && (
+                        <td>
+                          <button onClick={() => eliminarUsuario(usuario.id)}>
+                            Eliminar
+                          </button>
+                        </td>
+                      )}
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
           <div className="pagination">
             {paginas.map((numero) => (
               <button
