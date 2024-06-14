@@ -1,3 +1,5 @@
+
+// IMAGENES DEL INDEX
 document.addEventListener("DOMContentLoaded", function () {
   // Array de rutas de imágenes
   var bgImages = [
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     card.style.backgroundImage = "url('" + bgImages[index] + "')";
   });
 });
-
+// IMAGENES TIENDA
 document.addEventListener("DOMContentLoaded", function () {
   // Array de rutas de imágenes
   var bgImages = [
@@ -57,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// IMAGENES BLOG
+
 document.addEventListener("DOMContentLoaded", function () {
   // Array de rutas de imágenes
   var bgImages = [
@@ -75,21 +79,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Array de rutas de imágenes
-  var bgImages = [
-    "../images/eeuu/new york.jpg",
-    "../images/eeuu/new york.jpg",
-    "../images/eeuu/new york.jpg",
-    "../images/eeuu/new york.jpg",
-  ];
 
-  // Seleccionar todas las tarjetas
-  var cards = document.querySelectorAll(".information-cards");
-
-  // Iterar sobre las tarjetas y asignar una imagen de fondo a cada una
-  cards.forEach(function (card, index) {
-    card.style.backgroundImage = "url('" + bgImages[index] + "')";
-  });
-});
 
