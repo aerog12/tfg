@@ -71,18 +71,18 @@ h2 {
   padding: 8px 16px;
   margin: 0 4px;
   border: none;
-  background-color: #007bff;
+  background-color: var(--colorPrimario);
   color: white;
   cursor: pointer;
   border-radius: 4px;
 }
 
 .pagination button.active {
-  background-color: #0056b3;
+  background-color: #3832e1;
 }
 
 .pagination button:hover {
-  background-color: #0056b3;
+  background-color: #3832e1;
 }
 
 /* Responsive adjustments */
