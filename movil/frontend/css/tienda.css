@@ -62,7 +62,6 @@ a {
   border-bottom: 2px solid var(--blancoPrincipal); /* Borde blanco de 1 píxel */
 }
 
-
 .btn-container {
   display: flex;
   flex-wrap: wrap;
@@ -266,7 +265,6 @@ a {
   text-align: center;
 }
 
-
 /* RESPONSIVE */
 
 @media (max-width: 1352px) {
@@ -317,7 +315,21 @@ a {
   }
 }
 
-@media (max-width: 349px) {
+
+
+@media (max-width: 370px) {
+  .text-container-titulo {
+    font-size: 2.3rem;
+  }
+
+  .text-container-titulo-morado {
+    font-size: 2.3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
   .contenido-categorias {
     width: 250px;
     height: 300px;
@@ -340,7 +352,7 @@ a {
 }
 
 @media (max-width: 756px) {
-  .card-shop{
+  .card-shop {
     width: 90%;
   }
 }
