@@ -12,7 +12,7 @@ export default function Carrusel(){
               <div class="icon-carrusel2">2</div>
               <div class="description">
                 <h4>JAPÓN</h4>
-                <p>Gets better every day - stay tuned</p>
+                <p>Descubre la capital nipona</p>
               </div>
             </div>
           </div>
@@ -22,7 +22,7 @@ export default function Carrusel(){
               <div class="icon-carrusel2">2</div>
               <div class="description">
                 <h4>LONDRES</h4>
-                <p>Gets better every day - stay tuned</p>
+                <p>Descubre la capital londinense</p>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function Carrusel(){
               <div class="icon-carrusel2">2</div>
               <div class="description">
                 <h4>OSAKA</h4>
-                <p>Gets better every day - stay tuned</p>
+                <p>Donde la tradición se encuentra con la modernidad</p>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function Carrusel(){
               <div class="icon-carrusel2">2</div>
               <div class="description">
                 <h4>NUEVA YORK</h4>
-                <p>Gets better every day - stay tuned</p>
+                <p>La ciudad que nunca duerme, vibrante y multicultural</p>
               </div>
             </div>
           </div>
