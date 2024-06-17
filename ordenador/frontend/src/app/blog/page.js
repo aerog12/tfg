@@ -35,35 +35,38 @@ export default function Blog() {
           <div className="section">
             <div className="vertical-title">EL PAÍS DEL SOL NACIENTE</div>
             <p className="cuerpoTexto-blog">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              saepe dignissimos assumenda sit ipsa possimus voluptas totam
-              consequatur, inventore, ut unde eius natus incidunt cumque velit
-              maxime eaque nemo a? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Adipisci dicta ad nesciunt repellat deleniti sed
-              cumque voluptatibus? Qui quam laboriosam error incidunt numquam,
-              repudiandae autem dolorem harum quis voluptas nihil!
+              ¡Bienvenidos a Japón, la tierra del contraste armónico entre lo
+              tradicional y lo ultramoderno! Desde la majestuosidad serena de
+              sus templos ancestrales hasta los destellantes rascacielos de
+              Tokio, Japón cautiva con su rica cultura y su innovación
+              tecnológica. Sus exquisitas artes culinarias, como el sushi y el
+              ramen, deleitan los sentidos, mientras que sus jardines zen
+              invitan a la reflexión tranquila. Sumérgete en la fascinante
+              mezcla de geishas y cosplay, samuráis y robots, que hacen de este
+              país una experiencia única e inolvidable para los viajeros de todo
+              el mundo.
             </p>
             <img src="/images/japon/tokyo.jpg" alt="" className="blog-image" />
           </div>
           <h1>LO MÁS BUSCADO</h1>
 
           <p className="cuerpoTexto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            saepe dignissimos assumenda sit ipsa possimus voluptas totam
-            consequatur
+            En el blog de AerogTravel podrás encontrar todo tipo de información
+            acerca de los destinos que siempre has soñado y que siempre has
+            querido visitar.
           </p>
           <div className="section">
             <img src="/images/japon/osaka.jpg" alt="" className="blog-image" />
             <div className="section-text">
               <h2>SHINSEKAI, EL BARRIO RETRO DE OSAKA</h2>
               <p className="cuerpoTexto-blog">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident saepe dignissimos assumenda sit ipsa possimus voluptas
-                totam consequatur, inventore, ut unde eius natus incidunt cumque
-                velit maxime eaque nemo a? Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Adipisci dicta ad nesciunt
-                repellat deleniti sed cumque voluptatibus? Qui quam laboriosam
-                error incidunt numquam,
+                Shinsekai, ubicado en Osaka, es un vibrante barrio que evoca la
+                nostalgia de la era Taisho y Showa de Japón. Con su icónica
+                Torre Tsutenkaku y sus callejuelas llenas de puestos de comida
+                tradicional, ofrece una experiencia única de la cultura local.
+                Aquí convergen la historia y la modernidad, capturando el
+                corazón de quienes buscan explorar lo auténtico en medio de la
+                bulliciosa metrópolis de Osaka.
               </p>
               <a href="/login" className="action-button-dark">
                 VER MÁS
@@ -75,13 +78,14 @@ export default function Blog() {
             <div className="section-text">
               <h2>DESCUBRE AKIHABARA, EL BARRIO ELECTRÓNICO DE TOKYO</h2>
               <p className="cuerpoTexto-blog">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident saepe dignissimos assumenda sit ipsa possimus voluptas
-                totam consequatur, inventore, ut unde eius natus incidunt cumque
-                velit maxime eaque nemo a? Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Adipisci dicta ad nesciunt
-                repellat deleniti sed cumque voluptatibus? Qui quam laboriosam
-                error incidunt numquam,
+                Akihabara, en Tokio, es un paraíso para los entusiastas de la
+                tecnología y la cultura pop japonesa. Con sus deslumbrantes
+                tiendas de electrónica, arcades futuristas y cafés temáticos de
+                anime, este distrito es el epicentro del fenómeno otaku.
+                Akihabara mezcla lo tradicional y lo moderno con su fascinante
+                oferta de maid cafés junto a santuarios antiguos, creando una
+                experiencia inigualable para los visitantes curiosos de todo el
+                mundo.
               </p>
               <a href="/login" className="action-button-dark">
                 VER MÁS
@@ -99,13 +103,16 @@ export default function Blog() {
             <div className="section-text">
               <h2>MEJORES SITIOS PARA COMER EN CAMDEN TOWN</h2>
               <p className="cuerpoTexto-blog">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident saepe dignissimos assumenda sit ipsa possimus voluptas
-                totam consequatur, inventore, ut unde eius natus incidunt cumque
-                velit maxime eaque nemo a? Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Adipisci dicta ad nesciunt
-                repellat deleniti sed cumque voluptatibus? Qui quam laboriosam
-                error incidunt numquam,
+                En esta sección encotrarás los mejores sitios para comer en el
+                mercado más famoso de la capital londinense. Conocido por su
+                diversidad gastronómica que atrae a foodies de todo el mundo.
+                Desde puestos callejeros con sabores internacionales hasta
+                restaurantes innovadores y mercados de alimentos orgánicos,
+                Camden ofrece una experiencia culinaria única. Aquí se fusionan
+                tradiciones culinarias globales con la energía creativa de la
+                escena urbana londinense, convirtiéndolo en un destino
+                imperdible para explorar nuevos sabores y disfrutar de una
+                auténtica aventura gastronómica.
               </p>
               <a href="/login" className="action-button-dark">
                 VER MÁS
@@ -115,9 +122,8 @@ export default function Blog() {
 
           <h1>OTROS POST INTERESANTES</h1>
           <p className="cuerpoTexto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            saepe dignissimos assumenda sit ipsa possimus voluptas totam
-            consequatur
+            Descubre más lecturas fascinantes en nuestros otros posts
+            destacados.
           </p>
 
           <div className="section-card">
