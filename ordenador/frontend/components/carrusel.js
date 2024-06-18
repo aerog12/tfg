@@ -6,7 +6,7 @@ export default function Carrusel(){
       <div class="carousel-container">
         <div class="carousel">
           <div class="carousel-item">
-            <image src="images/japon/tokyo.jpg" alt="Foto 1" />
+            <img src="images/japon/tokyo.jpg" alt="Foto 1" />
 
             <div class="carousel-caption">
               <div class="icon-carrusel2">2</div>
@@ -17,7 +17,7 @@ export default function Carrusel(){
             </div>
           </div>
           <div class="carousel-item">
-            <image src="images/londres2.jpg" alt="Foto 2" />
+            <img src="images/londres2.jpg" alt="Foto 2" />
             <div class="carousel-caption">
               <div class="icon-carrusel2">2</div>
               <div class="description">
@@ -27,7 +27,7 @@ export default function Carrusel(){
             </div>
           </div>
           <div class="carousel-item">
-            <image src="images/japon/osaka.jpg" alt="Foto 3" />
+            <img src="images/japon/osaka.jpg" alt="Foto 3" />
             <div class="carousel-caption">
               <div class="icon-carrusel2">2</div>
               <div class="description">
@@ -37,7 +37,7 @@ export default function Carrusel(){
             </div>
           </div>
           <div class="carousel-item">
-            <image src="images/eeuu/newYork.jpg" alt="Foto 4" />
+            <img src="images/eeuu/newYork.jpg" alt="Foto 4" />
             <div class="carousel-caption">
               <div class="icon-carrusel2">2</div>
               <div class="description">

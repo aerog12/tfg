@@ -46,7 +46,7 @@ export default function Blog() {
               país una experiencia única e inolvidable para los viajeros de todo
               el mundo.
             </p>
-            <image
+            <img
               src="/images/japon/tokyo.jpg"
               alt="tokyo night"
               className="blog-image"
@@ -60,7 +60,7 @@ export default function Blog() {
             querido visitar.
           </p>
           <div className="section">
-            <image
+            <img
               src="/images/japon/osaka.jpg"
               alt="shinsekai, osaka"
               className="blog-image"
@@ -99,7 +99,7 @@ export default function Blog() {
                 VER MÁS
               </a>
             </div>
-            <image
+            <img
               src="/images/japon/akihabra.jpg"
               alt="akihabara night"
               className="blog-image"
@@ -107,7 +107,7 @@ export default function Blog() {
           </div>
 
           <div className="section">
-            <image
+            <img
               src="/images/candem.jpg"
               alt="comida en candemtown"
               className="blog-image"

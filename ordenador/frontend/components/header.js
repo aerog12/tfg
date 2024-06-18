@@ -76,7 +76,7 @@ export default function Header(props) {
       <div className="navBar">
         <div>
           <a href="/">
-            <image
+            <img
               src="/images/logos/logo pagina oscuro.png"
               alt="logo aerogtravel"
               className="logo"
