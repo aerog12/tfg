@@ -14,7 +14,7 @@ const bgImages = [
 
 const categoryImages = [
   "/images/comida.jpg",
-  "/images/japon/kyotoñ.jpg",
+  "/images/japon/kyoto.jpg",
   "/images/santorini.jpg",
   "/images/explorar.jpg",
 ];
