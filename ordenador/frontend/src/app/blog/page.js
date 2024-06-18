@@ -46,7 +46,11 @@ export default function Blog() {
               país una experiencia única e inolvidable para los viajeros de todo
               el mundo.
             </p>
-            <img src="/images/japon/tokyo.jpg" alt="" className="blog-image" />
+            <image
+              src="/images/japon/tokyo.jpg"
+              alt="tokyo night"
+              className="blog-image"
+            />
           </div>
           <h1>LO MÁS BUSCADO</h1>
 
@@ -56,7 +60,11 @@ export default function Blog() {
             querido visitar.
           </p>
           <div className="section">
-            <img src="/images/japon/osaka.jpg" alt="" className="blog-image" />
+            <image
+              src="/images/japon/osaka.jpg"
+              alt="shinsekai, osaka"
+              className="blog-image"
+            />
             <div className="section-text">
               <h2>SHINSEKAI, EL BARRIO RETRO DE OSAKA</h2>
               <p className="cuerpoTexto-blog">
@@ -91,15 +99,19 @@ export default function Blog() {
                 VER MÁS
               </a>
             </div>
-            <img
+            <image
               src="/images/japon/akihabra.jpg"
-              alt=""
+              alt="akihabara night"
               className="blog-image"
             />
           </div>
 
           <div className="section">
-            <img src="/images/candem.jpg" alt="" className="blog-image" />
+            <image
+              src="/images/candem.jpg"
+              alt="comida en candemtown"
+              className="blog-image"
+            />
             <div className="section-text">
               <h2>MEJORES SITIOS PARA COMER EN CAMDEN TOWN</h2>
               <p className="cuerpoTexto-blog">
